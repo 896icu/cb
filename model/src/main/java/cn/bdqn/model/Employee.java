@@ -1,12 +1,13 @@
 package cn.bdqn.model;
 
+import java.util.List;
+
 public class Employee {
     private Integer id;
 
     private String name;
 
     private String phone;
-
     private String nickName;
 
     private String IDCard;
@@ -14,7 +15,6 @@ public class Employee {
     private String status;
 
     private String level;
-
     private Integer superior;
 
     public Integer getId() {

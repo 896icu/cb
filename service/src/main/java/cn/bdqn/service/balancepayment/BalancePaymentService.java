@@ -5,6 +5,9 @@ import cn.bdqn.model.BalancePayment;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 @Service
@@ -12,11 +15,31 @@ import java.util.List;
 public class BalancePaymentService {
     @Resource
     private BalancePaymentMapper balancePaymentMapper;
-    public List<BalancePayment> getBalancePaymentByPage(Integer start, Integer size, Integer typeId, Date startBeginDate,
-                                                 Date endBeginDate){
-        return balancePaymentMapper.getBalancePaymentByPage((start-1)*size,size,typeId,startBeginDate,endBeginDate);
+    SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+    SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
+    SimpleDateFormat birthdayFormat = new SimpleDateFormat("yyyy-MM-dd");
+    DecimalFormat decimalFormat = new DecimalFormat("##.00");
+    public List<BalancePayment> getBalancePaymentByPage(Integer start, Integer size, Integer typeId, String startBeginDate,
+                                                  String endBeginDate) throws ParseException {
+        Date startDate=null;
+        Date endDate=null;
+        if (startBeginDate != null){
+            startDate=birthdayFormat.parse(startBeginDate);
+        }
+        if (endBeginDate != null){
+            endDate=birthdayFormat.parse(endBeginDate);
+        }
+        return balancePaymentMapper.getBalancePaymentByPage((start-1)*size,size,typeId,startDate,endDate);
     }
-    public Long count(Integer typeId,Date startBeginDate,Date endBeginDate){
-        return balancePaymentMapper.count(typeId,startBeginDate,endBeginDate);
+    public Long count(Integer typeId,String startBeginDate,String endBeginDate) throws ParseException {
+        Date startDate=null;
+        Date endDate=null;
+        if (startBeginDate != null){
+            startDate=birthdayFormat.parse(startBeginDate);
+        }
+        if (endBeginDate != null){
+            endDate=birthdayFormat.parse(endBeginDate);
+        }
+        return balancePaymentMapper.count(typeId,startDate,endDate);
     }
 }
