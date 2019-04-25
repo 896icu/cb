@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.RiskDetailMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.RiskDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="decisionId" jdbcType="CHAR" property="decisionId" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="mobileAddress" jdbcType="VARCHAR" property="mobileAddress" />
+    <result column="IDCardAddress" jdbcType="VARCHAR" property="IDCardAddress" />
+    <result column="level" jdbcType="VARCHAR" property="level" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, decisionId, score, mobileAddress, IDCardAddress, level, detail, createDate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from riskdetail
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from riskdetail
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.RiskDetail">
+    insert into riskdetail (id, decisionId, score, 
+      mobileAddress, IDCardAddress, level, 
+      detail, createDate)
+    values (#{id,jdbcType=INTEGER}, #{decisionId,jdbcType=CHAR}, #{score,jdbcType=INTEGER}, 
+      #{mobileAddress,jdbcType=VARCHAR}, #{IDCardAddress,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, 
+      #{detail,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.RiskDetail">
+    insert into riskdetail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="decisionId != null">
+        decisionId,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+      <if test="mobileAddress != null">
+        mobileAddress,
+      </if>
+      <if test="IDCardAddress != null">
+        IDCardAddress,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="detail != null">
+        detail,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="decisionId != null">
+        #{decisionId,jdbcType=CHAR},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="mobileAddress != null">
+        #{mobileAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="IDCardAddress != null">
+        #{IDCardAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        #{detail,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.RiskDetail">
+    update riskdetail
+    <set>
+      <if test="decisionId != null">
+        decisionId = #{decisionId,jdbcType=CHAR},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="mobileAddress != null">
+        mobileAddress = #{mobileAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="IDCardAddress != null">
+        IDCardAddress = #{IDCardAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        detail = #{detail,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.RiskDetail">
+    update riskdetail
+    set decisionId = #{decisionId,jdbcType=CHAR},
+      score = #{score,jdbcType=INTEGER},
+      mobileAddress = #{mobileAddress,jdbcType=VARCHAR},
+      IDCardAddress = #{IDCardAddress,jdbcType=VARCHAR},
+      level = #{level,jdbcType=VARCHAR},
+      detail = #{detail,jdbcType=VARCHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

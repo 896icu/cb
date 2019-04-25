@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.InstitutionsMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.Institutions">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="backendId" jdbcType="INTEGER" property="backendId" />
+    <result column="institutionName" jdbcType="VARCHAR" property="institutionName" />
+    <result column="productName" jdbcType="VARCHAR" property="productName" />
+    <result column="versionType" jdbcType="VARCHAR" property="versionType" />
+    <result column="deposit" jdbcType="DECIMAL" property="deposit" />
+    <result column="serviceCharge" jdbcType="DECIMAL" property="serviceCharge" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="merchantSituation" jdbcType="VARCHAR" property="merchantSituation" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="institutionalStatus" jdbcType="VARCHAR" property="institutionalStatus" />
+    <result column="accountLimit" jdbcType="INTEGER" property="accountLimit" />
+    <result column="riskSetting" jdbcType="VARCHAR" property="riskSetting" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, backendId, institutionName, productName, versionType, deposit, serviceCharge, 
+    remarks, merchantSituation, createDate, institutionalStatus, accountLimit, riskSetting, 
+    balance
+  </sql>
+  <resultMap id="institutionMap" type="cn.bdqn.model.Institutions">
+    <result column="id" property="id" />
+    <result column="backendId" property="backendId"/>
+    <result column="institutionName" property="institutionName" />
+    <result column="productName" property="productName"/>
+    <result column="versionType" property="versionType"/>
+    <result column="deposit" property="deposit"/>
+    <result column="serviceCharge" property="serviceCharge"/>
+    <result column="remarks" property="remarks"/>
+    <result column="merchantSituation" property="merchantSituation"/>
+    <result column="createDate" property="createDate"/>
+    <result column="institutionalStatus" property="institutionalStatus"/>
+    <result column="accountLimit" property="accountLimit"/>
+    <result column="riskSetting" property="riskSetting"/>
+    <result column="balance" property="balance"/>
+    <result column="phone" property="phone"/>
+    <result column="idCard" property="idCard"/>
+    <result column="name" property="name" />
+  </resultMap>
+  <select id="selectAll" resultMap="institutionMap">
+      SELECT i.*,b.`name` AS `name`,b.`phone` AS phone,b.`idCard` AS idCard FROM institutions i
+      LEFT JOIN backenduser b ON b.id=i.backendId
+      limit #{start},#{size}
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from institutions
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from institutions
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.Institutions">
+    insert into institutions (id, backendId, institutionName, 
+      productName, versionType, deposit, 
+      serviceCharge, remarks, merchantSituation, 
+      createDate, institutionalStatus, accountLimit, 
+      riskSetting, balance)
+    values (#{id,jdbcType=INTEGER}, #{backendId,jdbcType=INTEGER}, #{institutionName,jdbcType=VARCHAR}, 
+      #{productName,jdbcType=VARCHAR}, #{versionType,jdbcType=VARCHAR}, #{deposit,jdbcType=DECIMAL}, 
+      #{serviceCharge,jdbcType=DECIMAL}, #{remarks,jdbcType=VARCHAR}, #{merchantSituation,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{institutionalStatus,jdbcType=VARCHAR}, #{accountLimit,jdbcType=INTEGER}, 
+      #{riskSetting,jdbcType=VARCHAR}, #{balance,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.Institutions">
+    insert into institutions
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="backendId != null">
+        backendId,
+      </if>
+      <if test="institutionName != null">
+        institutionName,
+      </if>
+      <if test="productName != null">
+        productName,
+      </if>
+      <if test="versionType != null">
+        versionType,
+      </if>
+      <if test="deposit != null">
+        deposit,
+      </if>
+      <if test="serviceCharge != null">
+        serviceCharge,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="merchantSituation != null">
+        merchantSituation,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="institutionalStatus != null">
+        institutionalStatus,
+      </if>
+      <if test="accountLimit != null">
+        accountLimit,
+      </if>
+      <if test="riskSetting != null">
+        riskSetting,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="backendId != null">
+        #{backendId,jdbcType=INTEGER},
+      </if>
+      <if test="institutionName != null">
+        #{institutionName,jdbcType=VARCHAR},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="versionType != null">
+        #{versionType,jdbcType=VARCHAR},
+      </if>
+      <if test="deposit != null">
+        #{deposit,jdbcType=DECIMAL},
+      </if>
+      <if test="serviceCharge != null">
+        #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantSituation != null">
+        #{merchantSituation,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="institutionalStatus != null">
+        #{institutionalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="accountLimit != null">
+        #{accountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="riskSetting != null">
+        #{riskSetting,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Institutions">
+    update institutions
+    <set>
+      <if test="backendId != null">
+        backendId = #{backendId,jdbcType=INTEGER},
+      </if>
+      <if test="institutionName != null">
+        institutionName = #{institutionName,jdbcType=VARCHAR},
+      </if>
+      <if test="productName != null">
+        productName = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="versionType != null">
+        versionType = #{versionType,jdbcType=VARCHAR},
+      </if>
+      <if test="deposit != null">
+        deposit = #{deposit,jdbcType=DECIMAL},
+      </if>
+      <if test="serviceCharge != null">
+        serviceCharge = #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantSituation != null">
+        merchantSituation = #{merchantSituation,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="institutionalStatus != null">
+        institutionalStatus = #{institutionalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="accountLimit != null">
+        accountLimit = #{accountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="riskSetting != null">
+        riskSetting = #{riskSetting,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.Institutions">
+    update institutions
+    set backendId = #{backendId,jdbcType=INTEGER},
+      institutionName = #{institutionName,jdbcType=VARCHAR},
+      productName = #{productName,jdbcType=VARCHAR},
+      versionType = #{versionType,jdbcType=VARCHAR},
+      deposit = #{deposit,jdbcType=DECIMAL},
+      serviceCharge = #{serviceCharge,jdbcType=DECIMAL},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      merchantSituation = #{merchantSituation,jdbcType=VARCHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      institutionalStatus = #{institutionalStatus,jdbcType=VARCHAR},
+      accountLimit = #{accountLimit,jdbcType=INTEGER},
+      riskSetting = #{riskSetting,jdbcType=VARCHAR},
+      balance = #{balance,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="count" resultType="Long">
+    SELECT count(*) as count FROM institutions i
+    LEFT JOIN backenduser b ON b.id=i.backendId
+  </select>
+</mapper>

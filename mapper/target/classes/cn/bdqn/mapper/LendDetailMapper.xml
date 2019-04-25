@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.LendDetailMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.LendDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="devId" jdbcType="INTEGER" property="devId" />
+    <result column="backendId" jdbcType="INTEGER" property="backendId" />
+    <result column="lId" jdbcType="INTEGER" property="lId" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="lsId" jdbcType="INTEGER" property="lsId" />
+    <result column="upStaDate" jdbcType="TIMESTAMP" property="upStaDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, devId, backendId, lId, createDate, lsId, upStaDate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from lenddetail
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from lenddetail
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.LendDetail">
+    insert into lenddetail (id, devId, backendId, 
+      lId, createDate, lsId, 
+      upStaDate)
+    values (#{id,jdbcType=INTEGER}, #{devId,jdbcType=INTEGER}, #{backendId,jdbcType=INTEGER}, 
+      #{lId,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{lsId,jdbcType=INTEGER}, 
+      #{upStaDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.LendDetail">
+    insert into lenddetail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="devId != null">
+        devId,
+      </if>
+      <if test="backendId != null">
+        backendId,
+      </if>
+      <if test="lId != null">
+        lId,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="lsId != null">
+        lsId,
+      </if>
+      <if test="upStaDate != null">
+        upStaDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="devId != null">
+        #{devId,jdbcType=INTEGER},
+      </if>
+      <if test="backendId != null">
+        #{backendId,jdbcType=INTEGER},
+      </if>
+      <if test="lId != null">
+        #{lId,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lsId != null">
+        #{lsId,jdbcType=INTEGER},
+      </if>
+      <if test="upStaDate != null">
+        #{upStaDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.LendDetail">
+    update lenddetail
+    <set>
+      <if test="devId != null">
+        devId = #{devId,jdbcType=INTEGER},
+      </if>
+      <if test="backendId != null">
+        backendId = #{backendId,jdbcType=INTEGER},
+      </if>
+      <if test="lId != null">
+        lId = #{lId,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lsId != null">
+        lsId = #{lsId,jdbcType=INTEGER},
+      </if>
+      <if test="upStaDate != null">
+        upStaDate = #{upStaDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.LendDetail">
+    update lenddetail
+    set devId = #{devId,jdbcType=INTEGER},
+      backendId = #{backendId,jdbcType=INTEGER},
+      lId = #{lId,jdbcType=INTEGER},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      lsId = #{lsId,jdbcType=INTEGER},
+      upStaDate = #{upStaDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

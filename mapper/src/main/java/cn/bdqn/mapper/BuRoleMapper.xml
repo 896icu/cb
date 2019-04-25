@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.BuRoleMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.BuRole">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="buId" jdbcType="INTEGER" property="buId" />
+    <result column="rId" jdbcType="INTEGER" property="rId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, buId, rId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from burole
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from burole
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.BuRole">
+    insert into burole (id, buId, rId
+      )
+    values (#{id,jdbcType=INTEGER}, #{buId,jdbcType=INTEGER}, #{rId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.BuRole">
+    insert into burole
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="buId != null">
+        buId,
+      </if>
+      <if test="rId != null">
+        rId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="buId != null">
+        #{buId,jdbcType=INTEGER},
+      </if>
+      <if test="rId != null">
+        #{rId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.BuRole">
+    update burole
+    <set>
+      <if test="buId != null">
+        buId = #{buId,jdbcType=INTEGER},
+      </if>
+      <if test="rId != null">
+        rId = #{rId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.BuRole">
+    update burole
+    set buId = #{buId,jdbcType=INTEGER},
+      rId = #{rId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

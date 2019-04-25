@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.BalancePaymentMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.BalancePayment">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="typeId" jdbcType="INTEGER" property="typeId" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="purpose" jdbcType="VARCHAR" property="purpose" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+    <result column="nickName" jdbcType="VARCHAR" property="nickName" />
+    <result column="authenticator" jdbcType="VARCHAR" property="authenticator" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="enclosure" jdbcType="VARCHAR" property="enclosure" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createDate, typeId, amount, purpose, balance, operator, nickName, authenticator, 
+    status, enclosure
+  </sql>
+  <select id="getBalancePaymentByPage" resultType="cn.bdqn.model.BalancePayment">
+    SELECT b.*,t.typeName AS typeName FROM `balancepayment` b,`transactiontype` t WHERE b.typeId=t.id
+    <if test="typeId!=null and typeId!=0">
+      and b.typeId=#{typeId}
+    </if>
+    <if test="startBeginDate!=null and startBeginDate!=''">
+      and createDate>#{startBeginDate}
+    </if>
+    <if test="endBeginDate!=null and endBeginDate!=''">
+      and createDate&lt;#{endBeginDate}
+    </if>
+    limit #{start},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) as count FROM `balancepayment` b,`transactiontype` t WHERE b.typeId=t.id
+    <if test="typeId!=null and typeId!=0">
+      and b.typeId=#{typeId}
+    </if>
+    <if test="startBeginDate!=null and startBeginDate!=''">
+      and createDate>#{startBeginDate}
+    </if>
+    <if test="endBeginDate!=null and endBeginDate!=''">
+      and createDate&lt;#{endBeginDate}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from balancepayment
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from balancepayment
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.BalancePayment">
+    insert into balancepayment (id, createDate, typeId, 
+      amount, purpose, balance, 
+      operator, nickName, authenticator, 
+      status, enclosure)
+    values (#{id,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{typeId,jdbcType=INTEGER}, 
+      #{amount,jdbcType=DECIMAL}, #{purpose,jdbcType=VARCHAR}, #{balance,jdbcType=DECIMAL}, 
+      #{operator,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{authenticator,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{enclosure,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.BalancePayment">
+    insert into balancepayment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="typeId != null">
+        typeId,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="purpose != null">
+        purpose,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+      <if test="nickName != null">
+        nickName,
+      </if>
+      <if test="authenticator != null">
+        authenticator,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="enclosure != null">
+        enclosure,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="typeId != null">
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="purpose != null">
+        #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=DECIMAL},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="authenticator != null">
+        #{authenticator,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="enclosure != null">
+        #{enclosure,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.BalancePayment">
+    update balancepayment
+    <set>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="typeId != null">
+        typeId = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="purpose != null">
+        purpose = #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=DECIMAL},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        nickName = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="authenticator != null">
+        authenticator = #{authenticator,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="enclosure != null">
+        enclosure = #{enclosure,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.BalancePayment">
+    update balancepayment
+    set createDate = #{createDate,jdbcType=TIMESTAMP},
+      typeId = #{typeId,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=DECIMAL},
+      purpose = #{purpose,jdbcType=VARCHAR},
+      balance = #{balance,jdbcType=DECIMAL},
+      operator = #{operator,jdbcType=VARCHAR},
+      nickName = #{nickName,jdbcType=VARCHAR},
+      authenticator = #{authenticator,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      enclosure = #{enclosure,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
