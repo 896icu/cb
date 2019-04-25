@@ -9,11 +9,11 @@ public class BalancePayment {
 
     private Integer typeId;
 
-    private Long amount;
+    private Double amount;
 
     private String purpose;
 
-    private Long balance;
+    private Double balance;
 
     private String operator;
 
@@ -24,6 +24,14 @@ public class BalancePayment {
     private String status;
     private String typeName;
     private String enclosure;
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
 
     public String getTypeName() {
         return typeName;
@@ -57,11 +65,11 @@ public class BalancePayment {
         this.typeId = typeId;
     }
 
-    public Long getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(Long amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
@@ -71,14 +79,6 @@ public class BalancePayment {
 
     public void setPurpose(String purpose) {
         this.purpose = purpose;
-    }
-
-    public Long getBalance() {
-        return balance;
-    }
-
-    public void setBalance(Long balance) {
-        this.balance = balance;
     }
 
     public String getOperator() {

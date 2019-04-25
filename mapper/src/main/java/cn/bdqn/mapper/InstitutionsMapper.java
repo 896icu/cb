@@ -11,6 +11,7 @@ public interface InstitutionsMapper {
     List<Institutions> selectAll(@Param("start") Integer start,
                                  @Param("size") Integer size);
     Long count();
+    int updateMoney();
     int deleteByPrimaryKey(Integer id);
 
     int insert(Institutions record);

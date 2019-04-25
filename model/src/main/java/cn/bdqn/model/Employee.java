@@ -16,6 +16,15 @@ public class Employee {
 
     private String level;
     private Integer superior;
+    private String superName;
+
+    public String getSuperName() {
+        return superName;
+    }
+
+    public void setSuperName(String superName) {
+        this.superName = superName;
+    }
 
     public Integer getId() {
         return id;

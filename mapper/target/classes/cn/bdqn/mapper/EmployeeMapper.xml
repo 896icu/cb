@@ -15,18 +15,23 @@
     id, name, phone, nickName, IDCard, status, level, superior
   </sql>
   <select id="getEmployeeByPage" resultType="cn.bdqn.model.Employee">
-      SELECT * FROM employee where 1=1
+      SELECT e.*,r.`nameZH` AS superName FROM employee e,role r
+      WHERE r.`id`=e.`level`
       <if test="keywords!=null and keywords!=''">
-        and name like concat('%',#{keywords},'%')
+        and e.name like concat('%',#{keywords},'%')
       </if>
       limit #{start},#{size}
   </select>
   <select id="count" resultType="Long">
-    SELECT count(*) FROM employee where 1=1
+    SELECT count(*) FROM employee e,role r
+    WHERE r.`id`=e.`level`
     <if test="keywords!=null and keywords!=''">
-      and `name` like concat('%',#{keywords},'%')
+      and e.`name` like concat('%',#{keywords},'%')
     </if>
   </select>
+  <update id="updateStatus">
+    update employee set status=1 where id=#{id}
+  </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -38,10 +43,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Employee">
-    insert into employee (id, name, phone, 
+    insert into employee (name, phone,
       nickName, IDCard, status, 
-      level, superior)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{phone,jdbcType=CHAR}, 
+      level, super)
+    values (#{name,jdbcType=VARCHAR}, #{phone,jdbcType=CHAR},
       #{nickName,jdbcType=VARCHAR}, #{IDCard,jdbcType=CHAR}, #{status,jdbcType=CHAR}, 
       #{level,jdbcType=CHAR}, #{superior,jdbcType=INTEGER})
   </insert>

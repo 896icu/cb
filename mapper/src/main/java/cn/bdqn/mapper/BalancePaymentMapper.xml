@@ -54,11 +54,11 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.BalancePayment">
-    insert into balancepayment (id, createDate, typeId, 
+    insert into balancepayment (createDate, typeId,
       amount, purpose, balance, 
       operator, nickName, authenticator, 
       status, enclosure)
-    values (#{id,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{typeId,jdbcType=INTEGER}, 
+    values (#{createDate,jdbcType=TIMESTAMP}, #{typeId,jdbcType=INTEGER},
       #{amount,jdbcType=DECIMAL}, #{purpose,jdbcType=VARCHAR}, #{balance,jdbcType=DECIMAL}, 
       #{operator,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{authenticator,jdbcType=VARCHAR}, 
       #{status,jdbcType=VARCHAR}, #{enclosure,jdbcType=VARCHAR})

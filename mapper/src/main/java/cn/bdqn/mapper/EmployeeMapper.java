@@ -20,6 +20,6 @@ public interface EmployeeMapper {
     Employee selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(Employee record);
-
+    int updateStatus(Integer id);
     int updateByPrimaryKey(Employee record);
 }

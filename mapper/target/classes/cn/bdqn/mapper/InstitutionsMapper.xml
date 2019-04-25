@@ -41,6 +41,9 @@
     <result column="idCard" property="idCard"/>
     <result column="name" property="name" />
   </resultMap>
+  <update id="updateMoney">
+    update institutions set balance=balance-0.04 where id=1
+  </update>
   <select id="selectAll" resultMap="institutionMap">
       SELECT i.*,b.`name` AS `name`,b.`phone` AS phone,b.`idCard` AS idCard FROM institutions i
       LEFT JOIN backenduser b ON b.id=i.backendId
