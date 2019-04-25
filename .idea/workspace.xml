@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3294ca3-0c51-4b34-9050-d3bbf94aba3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BalancePaymentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BalancePaymentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BalancePaymentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BalancePaymentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/cn/bdqn/service/balancepayment/BalancePaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/cn/bdqn/service/balancepayment/BalancePaymentService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -166,17 +160,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cb" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -187,8 +171,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556176211513" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vuehr" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556176371291" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -244,7 +228,7 @@
       <workItem from="1556103152721" duration="2183000" />
       <workItem from="1556105516460" duration="3110000" />
       <workItem from="1556151140944" duration="5239000" />
-      <workItem from="1556159718066" duration="10651000" />
+      <workItem from="1556159718066" duration="10698000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1556156495326</created>
@@ -260,15 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556176202642</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="测试">
+      <created>1556176335771</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556176335771</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22041000" />
+    <option name="totallyTimeSpent" value="22088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -280,7 +270,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32786885" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,7 +281,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.0852459" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32786885" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
