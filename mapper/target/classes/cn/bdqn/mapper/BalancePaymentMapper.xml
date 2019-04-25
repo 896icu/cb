@@ -23,12 +23,12 @@
     <if test="typeId!=null and typeId!=0">
       and b.typeId=#{typeId}
     </if>
-    <if test="startBeginDate!=null and startBeginDate!=''">
-      and createDate>#{startBeginDate}
-    </if>
-    <if test="endBeginDate!=null and endBeginDate!=''">
-      and createDate&lt;#{endBeginDate}
-    </if>
+      <if test="startBeginDate!=null">
+          AND TO_DAYS(b.createDate)>=TO_DAYS(#{startBeginDate})
+      </if>
+      <if test="endBeginDate!=null">
+          AND TO_DAYS(b.createDate)>=TO_DAYS(#{endBeginDate})
+      </if>
     limit #{start},#{size}
   </select>
   <select id="count" resultType="Long">
@@ -36,12 +36,12 @@
     <if test="typeId!=null and typeId!=0">
       and b.typeId=#{typeId}
     </if>
-    <if test="startBeginDate!=null and startBeginDate!=''">
-      and createDate>#{startBeginDate}
-    </if>
-    <if test="endBeginDate!=null and endBeginDate!=''">
-      and createDate&lt;#{endBeginDate}
-    </if>
+      <if test="startBeginDate!=null">
+          AND TO_DAYS(b.createDate)>=TO_DAYS(#{startBeginDate})
+      </if>
+      <if test="endBeginDate!=null">
+          AND TO_DAYS(b.createDate)>=TO_DAYS(#{endBeginDate})
+      </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
