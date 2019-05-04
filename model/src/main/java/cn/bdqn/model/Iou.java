@@ -19,9 +19,45 @@ public class Iou {
 
     private Double yearRate;
 
-    private Long interest;
+    private double interest;
 
     private Integer status;
+    private String typeName;
+    private BackendUser backendUser;
+    private DevUser devUser;
+    private String remark;
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public BackendUser getBackendUser() {
+        return backendUser;
+    }
+
+    public void setBackendUser(BackendUser backendUser) {
+        this.backendUser = backendUser;
+    }
+
+    public DevUser getDevUser() {
+        return devUser;
+    }
+
+    public void setDevUser(DevUser devUser) {
+        this.devUser = devUser;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 
     public Integer getId() {
         return id;
@@ -87,11 +123,11 @@ public class Iou {
         this.yearRate = yearRate;
     }
 
-    public Long getInterest() {
+    public double getInterest() {
         return interest;
     }
 
-    public void setInterest(Long interest) {
+    public void setInterest(double interest) {
         this.interest = interest;
     }
 

@@ -1,7 +1,9 @@
 package cn.bdqn.mapper;
 
 import cn.bdqn.model.Extension;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface ExtensionMapper {
     int deleteByPrimaryKey(Integer id);
 

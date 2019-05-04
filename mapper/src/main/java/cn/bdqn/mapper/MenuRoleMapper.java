@@ -1,7 +1,9 @@
 package cn.bdqn.mapper;
 
 import cn.bdqn.model.MenuRole;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface MenuRoleMapper {
     int deleteByPrimaryKey(Integer id);
 

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.VisitMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.Visit">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="duId" jdbcType="INTEGER" property="duId" />
+    <result column="visitObject" jdbcType="VARCHAR" property="visitObject" />
+    <result column="visitMethodId" jdbcType="INTEGER" property="visitMethodId" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="returnvisit" jdbcType="VARCHAR" property="returnvisit" />
+    <result column="commentators" jdbcType="VARCHAR" property="commentators" />
+    <result column="comments" jdbcType="VARCHAR" property="comments" />
+    <result column="demohour" jdbcType="TIMESTAMP" property="demohour" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, duId, visitObject, visitMethodId, contact, number, content, remark, createDate, 
+    returnvisit, commentators, comments, demohour
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from visit
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from visit
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.Visit">
+    insert into visit (id, duId, visitObject, 
+      visitMethodId, contact, number, 
+      content, remark, createDate, 
+      returnvisit, commentators, comments, 
+      demohour)
+    values (#{id,jdbcType=INTEGER}, #{duId,jdbcType=INTEGER}, #{visitObject,jdbcType=VARCHAR}, 
+      #{visitMethodId,jdbcType=INTEGER}, #{contact,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
+      #{content,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{returnvisit,jdbcType=VARCHAR}, #{commentators,jdbcType=VARCHAR}, #{comments,jdbcType=VARCHAR}, 
+      #{demohour,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.Visit">
+    insert into visit
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="duId != null">
+        duId,
+      </if>
+      <if test="visitObject != null">
+        visitObject,
+      </if>
+      <if test="visitMethodId != null">
+        visitMethodId,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="returnvisit != null">
+        returnvisit,
+      </if>
+      <if test="commentators != null">
+        commentators,
+      </if>
+      <if test="comments != null">
+        comments,
+      </if>
+      <if test="demohour != null">
+        demohour,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="duId != null">
+        #{duId,jdbcType=INTEGER},
+      </if>
+      <if test="visitObject != null">
+        #{visitObject,jdbcType=VARCHAR},
+      </if>
+      <if test="visitMethodId != null">
+        #{visitMethodId,jdbcType=INTEGER},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnvisit != null">
+        #{returnvisit,jdbcType=VARCHAR},
+      </if>
+      <if test="commentators != null">
+        #{commentators,jdbcType=VARCHAR},
+      </if>
+      <if test="comments != null">
+        #{comments,jdbcType=VARCHAR},
+      </if>
+      <if test="demohour != null">
+        #{demohour,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Visit">
+    update visit
+    <set>
+      <if test="duId != null">
+        duId = #{duId,jdbcType=INTEGER},
+      </if>
+      <if test="visitObject != null">
+        visitObject = #{visitObject,jdbcType=VARCHAR},
+      </if>
+      <if test="visitMethodId != null">
+        visitMethodId = #{visitMethodId,jdbcType=INTEGER},
+      </if>
+      <if test="contact != null">
+        contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        number = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnvisit != null">
+        returnvisit = #{returnvisit,jdbcType=VARCHAR},
+      </if>
+      <if test="commentators != null">
+        commentators = #{commentators,jdbcType=VARCHAR},
+      </if>
+      <if test="comments != null">
+        comments = #{comments,jdbcType=VARCHAR},
+      </if>
+      <if test="demohour != null">
+        demohour = #{demohour,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.Visit">
+    update visit
+    set duId = #{duId,jdbcType=INTEGER},
+      visitObject = #{visitObject,jdbcType=VARCHAR},
+      visitMethodId = #{visitMethodId,jdbcType=INTEGER},
+      contact = #{contact,jdbcType=VARCHAR},
+      number = #{number,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      returnvisit = #{returnvisit,jdbcType=VARCHAR},
+      commentators = #{commentators,jdbcType=VARCHAR},
+      comments = #{comments,jdbcType=VARCHAR},
+      demohour = #{demohour,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

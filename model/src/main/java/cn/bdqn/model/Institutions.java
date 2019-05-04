@@ -29,7 +29,7 @@ public class Institutions {
 
     private String riskSetting;
 
-    private Long balance;
+    private Double balance;
     private String name;
 
     private String phone;
@@ -163,11 +163,11 @@ public class Institutions {
         this.riskSetting = riskSetting;
     }
 
-    public Long getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(Long balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 }

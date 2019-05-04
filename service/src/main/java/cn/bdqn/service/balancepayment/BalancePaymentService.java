@@ -42,4 +42,7 @@ public class BalancePaymentService {
         }
         return balancePaymentMapper.count(typeId,startDate,endDate);
     }
+    public int insert(BalancePayment record){
+        return balancePaymentMapper.insert(record);
+    }
 }

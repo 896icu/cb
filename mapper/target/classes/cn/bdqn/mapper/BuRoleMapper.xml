@@ -17,12 +17,12 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from burole
-    where id = #{id,jdbcType=INTEGER}
+    where buId = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.BuRole">
-    insert into burole (id, buId, rId
+    insert into burole (buId, rId
       )
-    values (#{id,jdbcType=INTEGER}, #{buId,jdbcType=INTEGER}, #{rId,jdbcType=INTEGER}
+    values (#{buId,jdbcType=INTEGER}, #{rId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.BuRole">

@@ -1,5 +1,7 @@
 package cn.bdqn.model;
 
+import java.util.List;
+
 public class BackendUser {
     private Integer id;
 
@@ -17,6 +19,15 @@ public class BackendUser {
 
     private String remark;
     private String idCard;
+    private List<Role> RoleName;
+
+    public List<Role> getRoleName() {
+        return RoleName;
+    }
+
+    public void setRoleName(List<Role> roleName) {
+        RoleName = roleName;
+    }
 
     public String getIdCard() {
         return idCard;

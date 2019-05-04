@@ -25,12 +25,12 @@
     delete from devuser
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="cn.bdqn.model.DevUser">
-    insert into devuser (id, name, password, 
+  <insert id="insert" parameterType="cn.bdqn.model.DevUser" useGeneratedKeys="true" keyProperty="id">
+    insert into devuser (name, password,
       balance, email, IDCard, 
       phone, type, createDate
       )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+    values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
       #{balance,jdbcType=DOUBLE}, #{email,jdbcType=VARCHAR}, #{IDCard,jdbcType=CHAR}, 
       #{phone,jdbcType=CHAR}, #{type,jdbcType=CHAR}, #{createDate,jdbcType=TIMESTAMP}
       )

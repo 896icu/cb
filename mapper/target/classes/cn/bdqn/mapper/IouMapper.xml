@@ -12,30 +12,120 @@
     <result column="yearRate" jdbcType="DOUBLE" property="yearRate" />
     <result column="interest" jdbcType="DECIMAL" property="interest" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="typeName" property="typeName"/>
+    <association property="backendUser" javaType="cn.bdqn.model.BackendUser">
+      <id column="b_id" property="id"/>
+      <result column="b_name" property="name"/>
+      <result column="b_idCard" property="idCard"/>
+      <result column="b_phone" property="phone"/>
+    </association>
+    <association property="devUser" javaType="cn.bdqn.model.DevUser">
+      <id column="d_id" property="id"/>
+      <result column="d_name" property="name"/>
+      <result column="d_idCard" property="IDCard"/>
+      <result column="d_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, createDate, backendId, devId, startDate, endDate, money, yearRate, interest, 
-    status
+    status,remark
   </sql>
+  <select id="getIouByPage" resultMap="BaseResultMap">
+    SELECT i.*,b.`id` AS b_id,b.`name` AS b_name,b.`phone` AS b_phone,b.`idCard` AS b_idCard,
+    d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name,t.iouName AS typeName FROM iou i
+    INNER JOIN backenduser b ON b.`id`=i.`backendId`
+    INNER JOIN devuser d ON d.`id`=i.`devId`
+    INNER JOIN ioutype t ON t.id=i.`status`
+    <if test="typeId!=null and typeId!=0">
+      and i.status=#{typeId}
+    </if>
+    <if test="startDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{startDate})
+    </if>
+    <if test="endDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{endDate})
+    </if>
+    <if test="keywords!=null and keywords!=''">
+      and d.name like concat('%',#{keywords},'%')
+    </if>
+    and i.status!=8
+    limit #{start},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM iou i
+    INNER JOIN backenduser b ON b.`id`=i.`backendId`
+    INNER JOIN devuser d ON d.`id`=i.`devId`
+    INNER JOIN ioutype t ON t.id=i.`status`
+    <if test="typeId!=null and typeId!=0">
+      and i.status=#{typeId}
+    </if>
+    <if test="startDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{startDate})
+    </if>
+    <if test="endDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{endDate})
+    </if>
+    <if test="keywords!=null and keywords!=''">
+      and d.name like concat('%',#{keywords},'%')
+    </if>
+    and i.status!=8
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from iou
-    where id = #{id,jdbcType=INTEGER}
+   SELECT i.*,b.`id` AS b_id,b.`name` AS b_name,b.`phone` AS b_phone,b.`idCard` AS b_idCard,
+    d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name,t.iouName AS typeName FROM iou i
+    INNER JOIN backenduser b ON b.`id`=i.`backendId`
+    INNER JOIN devuser d ON d.`id`=i.`devId`
+    INNER JOIN ioutype t ON t.id=i.`status`
+    where i.id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="iouList" resultMap="BaseResultMap">
+    SELECT i.*,b.`id` AS b_id,b.`name` AS b_name,b.`phone` AS b_phone,b.`idCard` AS b_idCard,
+    d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name,t.iouName AS typeName FROM iou i
+    INNER JOIN backenduser b ON b.`id`=i.`backendId`
+    INNER JOIN devuser d ON d.`id`=i.`devId`
+    INNER JOIN ioutype t ON t.id=i.`status`
+    <if test="startDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{startDate})
+    </if>
+    <if test="endDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{endDate})
+    </if>
+    <if test="keywords!=null and keywords!=''">
+      and d.name like concat('%',#{keywords},'%')
+    </if>
+    and i.status=8
+    limit #{start},#{size}
+  </select>
+  <select id="iouCount" resultType="Long">
+    SELECT count(*) FROM iou i
+    INNER JOIN backenduser b ON b.`id`=i.`backendId`
+    INNER JOIN devuser d ON d.`id`=i.`devId`
+    INNER JOIN ioutype t ON t.id=i.`status`
+    <if test="startDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{startDate})
+    </if>
+    <if test="endDate!=null">
+      AND TO_DAYS(i.createDate)>=TO_DAYS(#{endDate})
+    </if>
+    <if test="keywords!=null and keywords!=''">
+      and d.name like concat('%',#{keywords},'%')
+    </if>
+    and i.status=8
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from iou
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Iou">
-    insert into iou (id, createDate, backendId, 
+    insert into iou (createDate, backendId,
       devId, startDate, endDate, 
       money, yearRate, interest, 
-      status)
-    values (#{id,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{backendId,jdbcType=INTEGER}, 
+      status,remark)
+    values (#{createDate,jdbcType=TIMESTAMP}, #{backendId,jdbcType=INTEGER},
       #{devId,jdbcType=INTEGER}, #{startDate,jdbcType=TIMESTAMP}, #{endDate,jdbcType=TIMESTAMP}, 
       #{money,jdbcType=DOUBLE}, #{yearRate,jdbcType=DOUBLE}, #{interest,jdbcType=DECIMAL}, 
-      #{status,jdbcType=INTEGER})
+      #{status,jdbcType=INTEGER},#{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.Iou">
     insert into iou
@@ -104,6 +194,9 @@
       </if>
     </trim>
   </insert>
+  <update id="updateStatus">
+    update iou status=#{status} where id=#{id}
+  </update>
   <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Iou">
     update iou
     <set>

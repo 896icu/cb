@@ -20,7 +20,6 @@ public class DevUser {
     private String type;
 
     private Date createDate;
-
     public Integer getId() {
         return id;
     }

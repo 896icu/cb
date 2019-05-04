@@ -19,4 +19,10 @@ public class InstitutionsService {
     public Long count(){
         return institutionsMapper.count();
     }
+    public Institutions selectByPrimaryKey(Integer id){
+        return institutionsMapper.selectByPrimaryKey(id);
+    }
+    public int updateMoney(){
+        return institutionsMapper.updateMoney();
+    }
 }

@@ -1,6 +1,7 @@
 package cn.bdqn.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Role {
     private Integer id;
@@ -14,6 +15,16 @@ public class Role {
     private String nameZH;
 
     private String status;
+
+    private List<Integer> mrids;
+
+    public List<Integer> getMrids() {
+        return mrids;
+    }
+
+    public void setMrids(List<Integer> mrids) {
+        this.mrids = mrids;
+    }
 
     public Integer getId() {
         return id;

@@ -18,14 +18,17 @@
     from role
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from role
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from role
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="cn.bdqn.model.Role">
-    insert into role (id, createDate, buId, 
+  <insert id="insert" parameterType="cn.bdqn.model.Role" useGeneratedKeys="true" keyProperty="id">
+    insert into role (createDate, buId,
       name, nameZH, status)
-    values (#{id,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{buId,jdbcType=INTEGER}, 
+    values (#{createDate,jdbcType=TIMESTAMP}, #{buId,jdbcType=INTEGER},
       #{name,jdbcType=VARCHAR}, #{nameZH,jdbcType=VARCHAR}, #{status,jdbcType=CHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.Role">

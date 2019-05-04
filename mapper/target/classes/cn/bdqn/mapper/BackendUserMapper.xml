@@ -10,15 +10,25 @@
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="userFace" jdbcType="VARCHAR" property="userFace" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <collection property="roleName" ofType="cn.bdqn.model.Role">
+      <id column="rid" property="id"/>
+      <result column="rname" property="name"/>
+      <result column="rnamezh" property="nameZH"/>
+    </collection>
   </resultMap>
   <sql id="Base_Column_List">
     id, name, phone, address, username, password, userFace, remark
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from backenduser
-    where id = #{id,jdbcType=INTEGER}
+  <select id="selectById" resultMap="BaseResultMap">
+     SELECT b.*,r.`id` AS rid,r.`name` AS rname,r.`nameZh` AS rnamezh FROM backenduser b
+      INNER JOIN burole bu ON b.`id`=bu.`buId`
+      INNER JOIN role r ON r.`id`=bu.`rId`
+      WHERE b.`id`=#{id}
+  </select>
+  <select id="backendUserList" resultMap="BaseResultMap">
+    SELECT b.*,r.`id` AS rid,r.`name` AS rname,r.`nameZh` AS rnamezh FROM backenduser b
+      INNER JOIN burole bu ON b.`id`=bu.`buId`
+      INNER JOIN role r ON r.`id`=bu.`rId`
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from backenduser

@@ -1,7 +1,9 @@
 package cn.bdqn.mapper;
 
 import cn.bdqn.model.BuRole;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface BuRoleMapper {
     int deleteByPrimaryKey(Integer id);
 

@@ -20,8 +20,8 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.MenuRole">
-    insert into menurole (id, mId, rId)
-    values (#{id,jdbcType=INTEGER}, #{mId,jdbcType=INTEGER}, #{rId,jdbcType=INTEGER})
+    insert into menurole (mId, rId)
+    values (#{mId,jdbcType=INTEGER}, #{rId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.MenuRole">
     insert into menurole

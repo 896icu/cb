@@ -7,6 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="customer" />
+        <module name="dev" />
+        <module name="ious" />
         <module name="mapper" />
         <module name="model" />
         <module name="service" />
@@ -22,7 +25,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
+      <module name="customer" options="-parameters" />
+      <module name="dev" options="-parameters" />
       <module name="intomanaget" options="-parameters" />
+      <module name="ious" options="-parameters" />
       <module name="login" options="-parameters" />
       <module name="mapper" options="-parameters" />
       <module name="model" options="-parameters" />
