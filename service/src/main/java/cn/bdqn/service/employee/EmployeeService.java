@@ -54,4 +54,7 @@ public class EmployeeService {
     public boolean updateStatus(Integer id){
         return employeeMapper.updateStatus(id)>0;
     }
+    public Employee selectByPrimaryKey(Integer id){
+        return employeeMapper.selectByPrimaryKey(id);
+    }
 }

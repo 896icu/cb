@@ -20,6 +20,25 @@ public class DevUser {
     private String type;
 
     private Date createDate;
+    private int natureId;
+    private int ctypeId;
+
+    public int getNatureId() {
+        return natureId;
+    }
+
+    public void setNatureId(int natureId) {
+        this.natureId = natureId;
+    }
+
+    public int getCtypeId() {
+        return ctypeId;
+    }
+
+    public void setCtypeId(int ctypeId) {
+        this.ctypeId = ctypeId;
+    }
+
     public Integer getId() {
         return id;
     }

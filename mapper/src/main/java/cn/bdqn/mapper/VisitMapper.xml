@@ -15,28 +15,60 @@
     <result column="commentators" jdbcType="VARCHAR" property="commentators" />
     <result column="comments" jdbcType="VARCHAR" property="comments" />
     <result column="demohour" jdbcType="TIMESTAMP" property="demohour" />
+    <result column="typeName" property="typeName" />
+    <association property="devUser" javaType="cn.bdqn.model.DevUser">
+      <id column="d_id" property="id"/>
+      <result column="d_name" property="name"/>
+      <result column="d_idCard" property="IDCard"/>
+      <result column="d_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, duId, visitObject, visitMethodId, contact, number, content, remark, createDate, 
     returnvisit, commentators, comments, demohour
   </sql>
+  <select id="selectByName" resultMap="BaseResultMap">
+    SELECT v.*,m.`name` AS typeName,d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name FROM visit v
+    INNER JOIN devuser d ON d.`id`=v.`duId`
+    INNER JOIN visitmethod m ON m.`id`=v.`visitMethodId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
+    limit #{page},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM visit v
+    INNER JOIN devuser d ON d.`id`=v.`duId`
+    INNER JOIN visitmethod m ON m.`id`=v.`visitMethodId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from visit
-    where id = #{id,jdbcType=INTEGER}
+    SELECT v.*,m.`name` AS typeName,d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name FROM visit v
+    INNER JOIN devuser d ON d.`id`=v.`duId`
+    INNER JOIN visitmethod m ON m.`id`=v.`visitMethodId`
+    where v.id= #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from visit
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Visit">
-    insert into visit (id, duId, visitObject, 
+    insert into visit (duId, visitObject,
       visitMethodId, contact, number, 
       content, remark, createDate, 
       returnvisit, commentators, comments, 
       demohour)
-    values (#{id,jdbcType=INTEGER}, #{duId,jdbcType=INTEGER}, #{visitObject,jdbcType=VARCHAR}, 
+    values (#{duId,jdbcType=INTEGER}, #{visitObject,jdbcType=VARCHAR},
       #{visitMethodId,jdbcType=INTEGER}, #{contact,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
       #{content,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
       #{returnvisit,jdbcType=VARCHAR}, #{commentators,jdbcType=VARCHAR}, #{comments,jdbcType=VARCHAR}, 
@@ -157,6 +189,21 @@
       <if test="returnvisit != null">
         returnvisit = #{returnvisit,jdbcType=VARCHAR},
       </if>
+      <if test="commentators != null">
+        commentators = #{commentators,jdbcType=VARCHAR},
+      </if>
+      <if test="comments != null">
+        comments = #{comments,jdbcType=VARCHAR},
+      </if>
+      <if test="demohour != null">
+        demohour = #{demohour,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="addComment" parameterType="cn.bdqn.model.Visit">
+    update visit
+    <set>
       <if test="commentators != null">
         commentators = #{commentators,jdbcType=VARCHAR},
       </if>

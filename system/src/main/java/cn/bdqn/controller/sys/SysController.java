@@ -91,6 +91,13 @@ public class SysController {
         }
         return RespBean.error("修改失败");
     }
+    @RequestMapping(value = "toUpdateEmp",method = RequestMethod.GET)
+    public Map<String,Object> toUpdateEmp(Integer id) throws Exception {
+       Map<String,Object> map=new HashMap<>();
+       Employee employee=employeeService.selectByPrimaryKey(id);
+       map.put("emp",employee);
+       return map;
+    }
     @RequestMapping(value = "updateStatus",method = RequestMethod.POST)
     public RespBean updateStatus(Integer id){
         if(employeeService.updateStatus(id)){

@@ -11,6 +11,8 @@
     <result column="phone" jdbcType="CHAR" property="phone" />
     <result column="type" jdbcType="CHAR" property="type" />
     <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="ctypeId" jdbcType="INTEGER" property="ctypeId"/>
+    <result column="natureId" jdbcType="INTEGER" property="natureId"/>
   </resultMap>
   <sql id="Base_Column_List">
     id, name, password, balance, email, IDCard, phone, type, createDate
