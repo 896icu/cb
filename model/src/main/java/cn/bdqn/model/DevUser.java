@@ -22,6 +22,24 @@ public class DevUser {
     private Date createDate;
     private int natureId;
     private int ctypeId;
+    private String natureName;
+    private String ctypeName;
+
+    public String getNatureName() {
+        return natureName;
+    }
+
+    public void setNatureName(String natureName) {
+        this.natureName = natureName;
+    }
+
+    public String getCtypeName() {
+        return ctypeName;
+    }
+
+    public void setCtypeName(String ctypeName) {
+        this.ctypeName = ctypeName;
+    }
 
     public int getNatureId() {
         return natureId;

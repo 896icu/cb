@@ -6,6 +6,12 @@
     <result column="duId" jdbcType="INTEGER" property="duId" />
     <result column="Name" jdbcType="VARCHAR" property="name" />
     <result column="fileName" jdbcType="VARCHAR" property="fileName" />
+    <association property="devUser" javaType="cn.bdqn.model.DevUser">
+      <id column="d_id" property="id"/>
+      <result column="d_name" property="name"/>
+      <result column="d_idCard" property="IDCard"/>
+      <result column="d_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, duId, Name, fileName

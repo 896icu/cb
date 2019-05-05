@@ -99,4 +99,13 @@ public class CustomerController {
         }
         return RespBean.error("删除失败");
     }
+    @RequestMapping(value = "/materials",method = RequestMethod.GET)
+    public Map<String,Object> getMaterials(
+            @RequestParam(defaultValue = "1")Integer page,
+            @RequestParam(defaultValue = "10")Integer size,
+            String createDate,String keyword) throws ParseException {
+        Map<String,Object> map=new HashMap<>();
+
+        return map;
+    }
 }
