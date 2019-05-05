@@ -1,9 +1,8 @@
 package cn.bdqn.customer;
 
-import cn.bdqn.model.Employee;
-import cn.bdqn.model.RespBean;
-import cn.bdqn.model.Visit;
-import cn.bdqn.model.VisitMethod;
+import cn.bdqn.mapper.MaterialsMapper;
+import cn.bdqn.model.*;
+import cn.bdqn.service.material.MaterialsService;
 import cn.bdqn.service.visit.VisitMethodService;
 import cn.bdqn.service.visit.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,8 @@ public class CustomerController {
     private VisitService visitService;
     @Autowired
     private VisitMethodService visitMethodService;
-
+    @Autowired
+    private MaterialsService materialsService;
     @RequestMapping(value = "/visit",method = RequestMethod.GET)
     public Map<String,Object> getVisit(
             @RequestParam(defaultValue = "1")Integer page,
@@ -105,7 +105,10 @@ public class CustomerController {
             @RequestParam(defaultValue = "10")Integer size,
             String createDate,String keyword) throws ParseException {
         Map<String,Object> map=new HashMap<>();
-
+        List<Materials> materialsList=materialsService.selectAll(keyword, createDate, page, size);
+        Long count=materialsService.count(keyword,createDate);
+        map.put("materialsList",materialsList);
+        map.put("count",count);
         return map;
     }
 }

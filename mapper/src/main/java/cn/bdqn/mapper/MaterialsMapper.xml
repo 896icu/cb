@@ -11,6 +11,9 @@
       <result column="d_name" property="name"/>
       <result column="d_idCard" property="IDCard"/>
       <result column="d_phone" property="phone"/>
+      <result column="d_createDate" property="createDate"/>
+      <result column="d_typeName" property="ctypeName"/>
+      <result column="d_typeName2" property="natureName"/>
     </association>
   </resultMap>
   <sql id="Base_Column_List">
@@ -21,6 +24,34 @@
     <include refid="Base_Column_List" />
     from materials
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT m.*,d.`name` AS d_name,d.`IDCard` AS d_idCard,
+    d.`phone` AS d_phone,d.`createDate` AS d_createDate,c.typeName AS d_typeName,n.typeName AS d_typeName2 FROM materials m
+    INNER JOIN devuser d ON d.`id`=m.`duId`
+    INNER JOIN `ctype` c ON c.id=d.`ctypeId`
+    INNER JOIN nature n ON n.id=d.`natureId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(d.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      AND d.name LIKE CONCAT('%',#{keyword},'%')
+    </if>
+     LIMIT #{page},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM materials m
+    INNER JOIN devuser d ON d.`id`=m.`duId`
+    INNER JOIN `ctype` c ON c.id=d.`ctypeId`
+    INNER JOIN nature n ON n.id=d.`natureId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(d.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      AND d.name LIKE CONCAT('%',#{keyword},'%')
+    </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from materials
