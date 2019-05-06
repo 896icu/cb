@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.bdqn.mapper.PledgetypeMapper">
-  <resultMap id="BaseResultMap" type="cn.bdqn.model.Pledgetype">
+<mapper namespace="cn.bdqn.mapper.CollateralTypeMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.CollateralType">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
   </resultMap>
@@ -11,19 +11,19 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from pledgetype
+    from collateraltype
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from pledgetype
+    delete from collateraltype
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="cn.bdqn.model.Pledgetype">
-    insert into pledgetype (id, name)
+  <insert id="insert" parameterType="cn.bdqn.model.CollateralType">
+    insert into collateraltype (id, name)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.bdqn.model.Pledgetype">
-    insert into pledgetype
+  <insert id="insertSelective" parameterType="cn.bdqn.model.CollateralType">
+    insert into collateraltype
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -41,8 +41,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Pledgetype">
-    update pledgetype
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.CollateralType">
+    update collateraltype
     <set>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -50,8 +50,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.Pledgetype">
-    update pledgetype
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.CollateralType">
+    update collateraltype
     set name = #{name,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

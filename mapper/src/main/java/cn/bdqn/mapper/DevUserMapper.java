@@ -3,8 +3,11 @@ package cn.bdqn.mapper;
 import cn.bdqn.model.DevUser;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface DevUserMapper {
+    List<DevUser> selectAll();
     int deleteByPrimaryKey(Integer id);
 
     int insert(DevUser record);

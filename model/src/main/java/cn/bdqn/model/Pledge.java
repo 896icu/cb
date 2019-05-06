@@ -14,8 +14,6 @@ public class Pledge {
 
     private String name;
 
-    private Integer typeId;
-
     private Integer status;
 
     private Integer attn;
@@ -23,6 +21,69 @@ public class Pledge {
     private Integer company;
 
     private Integer variety;
+    private String typeName;
+    private String statusName;
+    private String attnName;
+    private String companyName;
+    private String varietyName;
+    private String remark;
+    private DevUser devUser;
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public DevUser getDevUser() {
+        return devUser;
+    }
+
+    public void setDevUser(DevUser devUser) {
+        this.devUser = devUser;
+    }
+
+    public String getVarietyName() {
+        return varietyName;
+    }
+
+    public void setVarietyName(String varietyName) {
+        this.varietyName = varietyName;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public String getAttnName() {
+        return attnName;
+    }
+
+    public void setAttnName(String attnName) {
+        this.attnName = attnName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
     public Integer getId() {
         return id;
@@ -62,14 +123,6 @@ public class Pledge {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
     }
 
     public Integer getStatus() {

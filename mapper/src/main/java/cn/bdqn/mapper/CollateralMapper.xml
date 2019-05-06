@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.mapper.CollateralMapper">
+  <resultMap id="BaseResultMap" type="cn.bdqn.model.Collateral">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="INTEGER" property="name" />
+    <result column="company" jdbcType="INTEGER" property="company" />
+    <result column="money" jdbcType="DECIMAL" property="money" />
+    <result column="pledged" jdbcType="DECIMAL" property="pledged" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="specifications" jdbcType="VARCHAR" property="specifications" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="attn" jdbcType="INTEGER" property="attn" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="duId" jdbcType="INTEGER" property="duId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, company, money, pledged, createDate, specifications, number, address, status, 
+    attn, remark, duId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from collateral
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from collateral
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.bdqn.model.Collateral">
+    insert into collateral (id, name, company, 
+      money, pledged, createDate, 
+      specifications, number, address, 
+      status, attn, remark, 
+      duId)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=INTEGER}, #{company,jdbcType=INTEGER}, 
+      #{money,jdbcType=DECIMAL}, #{pledged,jdbcType=DECIMAL}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{specifications,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{duId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.bdqn.model.Collateral">
+    insert into collateral
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="company != null">
+        company,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="pledged != null">
+        pledged,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="specifications != null">
+        specifications,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="attn != null">
+        attn,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="duId != null">
+        duId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=INTEGER},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=INTEGER},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="pledged != null">
+        #{pledged,jdbcType=DECIMAL},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="specifications != null">
+        #{specifications,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="attn != null">
+        #{attn,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="duId != null">
+        #{duId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Collateral">
+    update collateral
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=INTEGER},
+      </if>
+      <if test="company != null">
+        company = #{company,jdbcType=INTEGER},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="pledged != null">
+        pledged = #{pledged,jdbcType=DECIMAL},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="specifications != null">
+        specifications = #{specifications,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        number = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="attn != null">
+        attn = #{attn,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="duId != null">
+        duId = #{duId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.bdqn.model.Collateral">
+    update collateral
+    set name = #{name,jdbcType=INTEGER},
+      company = #{company,jdbcType=INTEGER},
+      money = #{money,jdbcType=DECIMAL},
+      pledged = #{pledged,jdbcType=DECIMAL},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      specifications = #{specifications,jdbcType=VARCHAR},
+      number = #{number,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      attn = #{attn,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      duId = #{duId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

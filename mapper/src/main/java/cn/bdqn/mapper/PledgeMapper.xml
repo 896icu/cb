@@ -7,33 +7,79 @@
     <result column="transaction" jdbcType="DECIMAL" property="transaction" />
     <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="typeId" jdbcType="INTEGER" property="typeId" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="attn" jdbcType="INTEGER" property="attn" />
     <result column="company" jdbcType="INTEGER" property="company" />
     <result column="variety" jdbcType="INTEGER" property="variety" />
+    <result column="statusName" property="statusName" />
+    <result column="typeName" jdbcType="VARCHAR" property="typeName" />
+    <result column="companyName" property="companyName" />
+    <result column="varietyName" property="varietyName" />
+    <result column="attnName" property="attnName" />
+    <association property="devUser" javaType="cn.bdqn.model.DevUser">
+      <id column="d_id" property="id"/>
+      <result column="d_name" property="name"/>
+      <result column="d_idCard" property="IDCard"/>
+      <result column="d_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, valuation, transaction, createDate, name, typeId, status, attn, company, variety
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from pledge
-    where id = #{id,jdbcType=INTEGER}
+    SELECT p.*,s.name AS statusName,bu.name as attnName,e.organizationName AS companyName,pt.productTypeName AS varietyName,
+    d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name FROM pledge p
+    INNER JOIN pledgeStatus s ON s.id=p.status
+    INNER JOIN extension e ON e.id=p.company
+    INNER JOIN producttype pt ON pt.id=p.variety
+    inner join backenduser bu on bu.id=p.attn
+    INNER JOIN devuser d ON d.`id`=p.`duId`
+    where p.id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT p.*,s.name AS statusName,bu.name as attnName,e.organizationName AS companyName,pt.productTypeName AS varietyName,
+    d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name FROM pledge p
+    INNER JOIN pledgeStatus s ON s.id=p.status
+    INNER JOIN extension e ON e.id=p.company
+    INNER JOIN producttype pt ON pt.id=p.variety
+    inner join backenduser bu on bu.id=p.attn
+    INNER JOIN devuser d ON d.`id`=p.`duId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
+    limit #{page},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM pledge p
+    INNER JOIN pledgeStatus s ON s.id=p.status
+    INNER JOIN extension e ON e.id=p.company
+    INNER JOIN producttype pt ON pt.id=p.variety
+    inner join backenduser bu on bu.id=p.attn
+    INNER JOIN devuser d ON d.`id`=p.`duId`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from pledge
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Pledge">
-    insert into pledge (id, valuation, transaction, 
-      createDate, name, typeId, 
+    insert into pledge (valuation, transaction,
+      createDate, name, typeName,duId,
       status, attn, company, 
       variety)
-    values (#{id,jdbcType=INTEGER}, #{valuation,jdbcType=DECIMAL}, #{transaction,jdbcType=DECIMAL}, 
-      #{createDate,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, 
-      #{status,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{company,jdbcType=INTEGER}, 
+    values (#{valuation,jdbcType=DECIMAL}, #{transaction,jdbcType=DECIMAL},
+      #{createDate,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{typeName,jdbcType=VARCHAR},
+      #{status,jdbcType=INTEGER},#{duId,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{company,jdbcType=INTEGER},
       #{variety,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.Pledge">
@@ -54,8 +100,8 @@
       <if test="name != null">
         name,
       </if>
-      <if test="typeId != null">
-        typeId,
+      <if test="typeName != null">
+        typeName,
       </if>
       <if test="status != null">
         status,
@@ -86,8 +132,8 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="typeId != null">
-        #{typeId,jdbcType=INTEGER},
+      <if test="typeName != null">
+        #{typeName,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
@@ -118,8 +164,8 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="typeId != null">
-        typeId = #{typeId,jdbcType=INTEGER},
+      <if test="typeName != null">
+        typeName = #{typeName,jdbcType=INTEGER},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
@@ -142,7 +188,7 @@
       transaction = #{transaction,jdbcType=DECIMAL},
       createDate = #{createDate,jdbcType=TIMESTAMP},
       name = #{name,jdbcType=VARCHAR},
-      typeId = #{typeId,jdbcType=INTEGER},
+      typeName = #{typeName,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
       attn = #{attn,jdbcType=INTEGER},
       company = #{company,jdbcType=INTEGER},
