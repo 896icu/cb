@@ -15,8 +15,16 @@ public class Role {
     private String nameZH;
 
     private String status;
-
+    private BackendUser backendUser;
     private List<Integer> mrids;
+
+    public BackendUser getBackendUser() {
+        return backendUser;
+    }
+
+    public void setBackendUser(BackendUser backendUser) {
+        this.backendUser = backendUser;
+    }
 
     public List<Integer> getMrids() {
         return mrids;

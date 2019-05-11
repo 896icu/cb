@@ -12,6 +12,7 @@
     <result column="company" jdbcType="INTEGER" property="company" />
     <result column="variety" jdbcType="INTEGER" property="variety" />
     <result column="statusName" property="statusName" />
+    <result column="duId" property="duId"/>
     <result column="typeName" jdbcType="VARCHAR" property="typeName" />
     <result column="companyName" property="companyName" />
     <result column="varietyName" property="varietyName" />
@@ -45,8 +46,8 @@
     inner join backenduser bu on bu.id=p.attn
     INNER JOIN devuser d ON d.`id`=p.`duId`
     WHERE 1=1
-    <if test="createDate!=null">
-      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    <if test="createDate!=null and createDate!=''">
+      AND DATE_FORMAT(p.createDate,'%Y-%m-%d') =#{createDate}
     </if>
     <if test="keyword!=null and keyword!=''">
       and d.name like concat('%',#{keyword},'%')
@@ -61,8 +62,8 @@
     inner join backenduser bu on bu.id=p.attn
     INNER JOIN devuser d ON d.`id`=p.`duId`
     WHERE 1=1
-    <if test="createDate!=null">
-      AND DATE_FORMAT(v.createDate,'%Y-%m-%d') =#{createDate}
+    <if test="createDate!=null and createDate!=''">
+      AND DATE_FORMAT(p.createDate,'%Y-%m-%d') =#{createDate}
     </if>
     <if test="keyword!=null and keyword!=''">
       and d.name like concat('%',#{keyword},'%')
@@ -175,6 +176,9 @@
       </if>
       <if test="company != null">
         company = #{company,jdbcType=INTEGER},
+      </if>
+      <if test="duId!=null">
+        duId=#{duId,jdbcType=INTEGER},
       </if>
       <if test="variety != null">
         variety = #{variety,jdbcType=INTEGER},

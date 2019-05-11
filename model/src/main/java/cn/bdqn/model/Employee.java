@@ -10,7 +10,7 @@ public class Employee {
     private String phone;
     private String nickName;
 
-    private String IDCard;
+    private String idCard;
 
     private String status;
 
@@ -58,12 +58,12 @@ public class Employee {
         this.nickName = nickName;
     }
 
-    public String getIDCard() {
-        return IDCard;
+    public String getIdCard() {
+        return idCard;
     }
 
-    public void setIDCard(String IDCard) {
-        this.IDCard = IDCard;
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
     }
 
     public String getStatus() {

@@ -10,7 +10,7 @@ public interface BackendUserMapper {
     BackendUser selectById(Integer id);
     List<BackendUser> backendUserList();
     int deleteByPrimaryKey(Integer id);
-
+    Long count();
     int insert(BackendUser record);
 
     int insertSelective(BackendUser record);

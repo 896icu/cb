@@ -1,6 +1,7 @@
 package cn.bdqn.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Institutions {
     private Integer id;
@@ -34,6 +35,14 @@ public class Institutions {
 
     private String phone;
     private String idCard;
+    private String IDCard;
+    public String getIDCard() {
+        return IDCard;
+    }
+
+    public void setIDCard(String IDCard) {
+        this.IDCard = IDCard;
+    }
 
     public String getName() {
         return name;

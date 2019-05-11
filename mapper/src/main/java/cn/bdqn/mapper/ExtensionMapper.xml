@@ -16,6 +16,9 @@
     from extension
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultType="cn.bdqn.model.Extension">
+    select * from extension
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from extension
     where id = #{id,jdbcType=INTEGER}

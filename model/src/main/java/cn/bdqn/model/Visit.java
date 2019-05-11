@@ -26,10 +26,46 @@ public class Visit {
     private String commentators;
 
     private String comments;
+    private Integer attn;
 
+    private Integer company;
     private Date demohour;
     private DevUser devUser;
     private String typeName;
+    private String attnName;
+    private String companyName;
+
+    public String getAttnName() {
+        return attnName;
+    }
+
+    public void setAttnName(String attnName) {
+        this.attnName = attnName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public Integer getAttn() {
+        return attn;
+    }
+
+    public void setAttn(Integer attn) {
+        this.attn = attn;
+    }
+
+    public Integer getCompany() {
+        return company;
+    }
+
+    public void setCompany(Integer company) {
+        this.company = company;
+    }
 
     public DevUser getDevUser() {
         return devUser;

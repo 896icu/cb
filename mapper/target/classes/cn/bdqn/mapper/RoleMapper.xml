@@ -8,18 +8,28 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="nameZH" jdbcType="VARCHAR" property="nameZH" />
     <result column="status" jdbcType="CHAR" property="status" />
+    <association property="backendUser" javaType="cn.bdqn.model.BackendUser">
+      <id column="b_id" property="id"/>
+      <result column="b_name" property="name"/>
+      <result column="b_idCard" property="idCard"/>
+      <result column="b_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, createDate, buId, name, nameZH, status
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from role
-    where id = #{id,jdbcType=INTEGER}
+    SELECT r.*,b.`name` AS b_name,b.`id` AS b_id,b.`idCard` AS b_idCard,b.`phone` AS b_phone FROM role r
+    INNER JOIN backenduser b ON b.`id`=r.`buId`
+    where r.id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM role r
+    INNER JOIN backenduser b ON b.`id`=r.`buId`
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from role
+    SELECT r.*,b.`name` AS b_name,b.`id` AS b_id,b.`idCard` AS b_idCard,b.`phone` AS b_phone FROM role r
+    INNER JOIN backenduser b ON b.`id`=r.`buId`
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from role

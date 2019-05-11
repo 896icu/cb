@@ -23,10 +23,10 @@ public class BalancePaymentService {
                                                   String endBeginDate) throws ParseException {
         Date startDate=null;
         Date endDate=null;
-        if (startBeginDate != null){
+        if (startBeginDate != null && startBeginDate!=""){
             startDate=birthdayFormat.parse(startBeginDate);
         }
-        if (endBeginDate != null){
+        if (endBeginDate != null && endBeginDate!=""){
             endDate=birthdayFormat.parse(endBeginDate);
         }
         return balancePaymentMapper.getBalancePaymentByPage((start-1)*size,size,typeId,startDate,endDate);
@@ -34,10 +34,10 @@ public class BalancePaymentService {
     public Long count(Integer typeId,String startBeginDate,String endBeginDate) throws ParseException {
         Date startDate=null;
         Date endDate=null;
-        if (startBeginDate != null){
+        if (startBeginDate != null && startBeginDate!=""){
             startDate=birthdayFormat.parse(startBeginDate);
         }
-        if (endBeginDate != null){
+        if (endBeginDate != null && endBeginDate!=""){
             endDate=birthdayFormat.parse(endBeginDate);
         }
         return balancePaymentMapper.count(typeId,startDate,endDate);

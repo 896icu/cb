@@ -8,6 +8,7 @@ import java.util.List;
 @Mapper
 public interface RoleMapper {
     List<Role> selectAll();
+    Long count();
     int deleteByPrimaryKey(Integer id);
 
     int insert(Role record);

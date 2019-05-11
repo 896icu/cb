@@ -1,8 +1,13 @@
 package cn.bdqn.mapper;
 
 import cn.bdqn.model.CollateralType;
+import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
+@Mapper
 public interface CollateralTypeMapper {
+    List<CollateralType> selectAll();
     int deleteByPrimaryKey(Integer id);
 
     int insert(CollateralType record);

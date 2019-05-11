@@ -15,28 +15,79 @@
     <result column="attn" jdbcType="INTEGER" property="attn" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="duId" jdbcType="INTEGER" property="duId" />
+    <result column="statusName" property="statusName" />
+    <result column="typeName" property="typeName" />
+    <result column="companyName" property="companyName" />
+    <result column="attnName" property="attnName" />
+    <association property="devUser" javaType="cn.bdqn.model.DevUser">
+      <id column="d_id" property="id"/>
+      <result column="d_name" property="name"/>
+      <result column="d_idCard" property="IDCard"/>
+      <result column="d_phone" property="phone"/>
+    </association>
   </resultMap>
   <sql id="Base_Column_List">
     id, name, company, money, pledged, createDate, specifications, number, address, status, 
     attn, remark, duId
   </sql>
+  <select id="selectByName" resultMap="BaseResultMap">
+    SELECT c.*,ct.`name` AS typeName,ps.`name` AS statusName,
+    b.`name` AS attnName,d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name,
+    e.`organizationName` AS companyName
+     FROM collateral c
+    INNER JOIN collateralType ct ON ct.`id`=c.`name`
+    INNER JOIN pledgestatus ps ON ps.`id`=c.`status`
+    INNER JOIN backenduser b ON b.`id`=c.`attn`
+    INNER JOIN devuser d ON d.`id`=c.`duId`
+    INNER JOIN extension e ON e.`id`=c.`company`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(c.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
+    limit #{page},#{size}
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*)
+    FROM collateral c
+    INNER JOIN collateralType ct ON ct.`id`=c.`name`
+    INNER JOIN pledgestatus ps ON ps.`id`=c.`status`
+    INNER JOIN backenduser b ON b.`id`=c.`attn`
+    INNER JOIN devuser d ON d.`id`=c.`duId`
+    INNER JOIN extension e ON e.`id`=c.`company`
+    WHERE 1=1
+    <if test="createDate!=null">
+      AND DATE_FORMAT(c.createDate,'%Y-%m-%d') =#{createDate}
+    </if>
+    <if test="keyword!=null and keyword!=''">
+      and d.name like concat('%',#{keyword},'%')
+    </if>
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from collateral
-    where id = #{id,jdbcType=INTEGER}
+   SELECT c.*,ct.`name` AS typeName,ps.`name` AS statusName,
+    b.`name` AS attnName,d.`id` AS d_id,d.`IDCard` AS d_idCard,d.`name` AS d_name,
+    e.`organizationName` AS companyName
+     FROM collateral c
+    INNER JOIN collateralType ct ON ct.`id`=c.`name`
+    INNER JOIN pledgestatus ps ON ps.`id`=c.`status`
+    INNER JOIN backenduser b ON b.`id`=c.`attn`
+    INNER JOIN devuser d ON d.`id`=c.`duId`
+    INNER JOIN extension e ON e.`id`=c.`company`
+    where c.id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from collateral
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Collateral">
-    insert into collateral (id, name, company, 
+    insert into collateral (name, company,
       money, pledged, createDate, 
       specifications, number, address, 
       status, attn, remark, 
       duId)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=INTEGER}, #{company,jdbcType=INTEGER}, 
+    values (#{name,jdbcType=INTEGER}, #{company,jdbcType=INTEGER},
       #{money,jdbcType=DECIMAL}, #{pledged,jdbcType=DECIMAL}, #{createDate,jdbcType=TIMESTAMP}, 
       #{specifications,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
       #{status,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 

@@ -2,27 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3294ca3-0c51-4b34-9050-d3bbf94aba3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Collateral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/CollateralType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/InstitutionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/InstitutionsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/DevUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/DevUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/DevUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/DevUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BackendUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BackendUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BackendUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/BackendUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/ExtensionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/ExtensionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/ExtensionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/ExtensionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/InstitutionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/InstitutionsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/MenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/TransactionTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/TransactionTypeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/TransactionTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/cn/bdqn/mapper/TransactionTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Institutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Institutions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledgetype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Institutions.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Institutions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/cn/bdqn/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/balancepayment/BalancePaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/balancepayment/BalancePaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/cn/bdqn/service/balancepayment/BalancePaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/cn/bdqn/service/balancepayment/BalancePaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,10 +70,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="146" column="64" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="183" column="41" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="41" />
+            <state relative-caret-position="249">
+              <caret line="225" column="8" lean-forward="true" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,44 +91,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/CollateralType.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Collateral.java">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/product/ProducttypeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state relative-caret-position="175">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml">
+        <entry file="file://$PROJECT_DIR$/customer/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
-              <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+            <state relative-caret-position="-300" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,27 +124,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="125">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgeService.java">
+        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state relative-caret-position="3600">
+              <caret line="180" column="38" selection-start-line="180" selection-start-column="38" selection-end-line="180" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
               <folding>
-                <element signature="e#726#727#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#911#912#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,9 +181,15 @@
       <find>send</find>
       <find>updateByPrimaryKeySelective</find>
       <find>selectByPrimaryKey</find>
-      <find>insert</find>
       <find>deleteByPrimaryKey</find>
       <find>VisitMapper</find>
+      <find>Zip</find>
+      <find>list</find>
+      <find>then</find>
+      <find>handleDownload</find>
+      <find>ID</find>
+      <find>super</find>
+      <find>insert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,57 +203,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/buser/BackendUserService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.xml" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Role.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/mrole/MenuRoleService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuRoleMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BuRoleMapper.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/BuRole.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/role/RoleService.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/burole/BuRoleService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BuRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java" />
-        <option value="$PROJECT_DIR$/customer/pom.xml" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/customer/VisitService.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/employee/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java" />
-        <option value="$PROJECT_DIR$/ious/src/main/java/cn/bdqn/controller/iou/IouController.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMethodMapper.xml" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMethodMapper.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitMethodService.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Materials.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/DevUser.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MaterialsMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MaterialsMapper.xml" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/material/MaterialsService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.xml" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.xml" />
         <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.java" />
         <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.xml" />
         <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgetypeMapper.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.java" />
         <option value="$PROJECT_DIR$/customer/src/main/java/cn/bdqn/CustomerApplication.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgestatusMapper.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgestatusService.java" />
-        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/product/ProducttypeService.java" />
         <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.java" />
         <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.xml" />
         <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/devuser/DevUserService.java" />
-        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml" />
         <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgeService.java" />
-        <option value="$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Collateral.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ExtensionMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/extension/ExtensionService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/collateral/CollateralService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/collateral/CollateralTypeService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/InstitutionsMapper.xml" />
+        <option value="F:/新建文件夹/ac/src/router/index.js" />
+        <option value="F:/新建文件夹/ac/src/views/zip/organ.vue" />
+        <option value="F:/迅雷下载/ac/src/router/modules/sys.js" />
+        <option value="F:/迅雷下载/ac/src/router/index.js" />
+        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Institutions.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/balancepayment/BalancePaymentService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/transaction/TransactionTypeService.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Employee.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/EmployeeMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/buser/BackendUserService.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Role.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/role/RoleService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/menu/MenuService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.xml" />
+        <option value="$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitService.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml" />
+        <option value="$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/product/ProducttypeService.java" />
+        <option value="$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java" />
+        <option value="$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml" />
       </list>
     </option>
   </component>
@@ -244,7 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,30 +298,25 @@
             <path>
               <item name="cb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -286,17 +324,168 @@
             <path>
               <item name="cb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="bdqn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bdqn" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="visit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bdqn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bdqn" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,10 +495,12 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557113402010" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557482576269" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="F:/新项目/P2P金融/shengge源码/demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -317,11 +508,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.bdqn.service.menu" />
+      <recent name="cn.bdqn.service.transaction" />
+      <recent name="cn.bdqn.service.collateral" />
       <recent name="cn.bdqn.service.product" />
       <recent name="cn.bdqn.service.pledge" />
-      <recent name="cn.bdqn.service.material" />
-      <recent name="cn.bdqn.service.visit" />
-      <recent name="cn.bdqn.service.customer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\spring boot\workspace\book\cb\model\src\main\java\cn\bdqn\model" />
@@ -400,7 +591,12 @@
       <workItem from="1556929625875" duration="15965000" />
       <workItem from="1557015387444" duration="1583000" />
       <workItem from="1557019114898" duration="12447000" />
-      <workItem from="1557101733129" duration="10181000" />
+      <workItem from="1557101733129" duration="13647000" />
+      <workItem from="1557122148265" duration="5915000" />
+      <workItem from="1557188544843" duration="15503000" />
+      <workItem from="1557274840482" duration="16870000" />
+      <workItem from="1557361177359" duration="18509000" />
+      <workItem from="1557447988794" duration="21849000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1556156495326</created>
@@ -465,18 +661,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557034572399</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新">
+      <created>1557113426366</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557113426366</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139223000" />
+    <option name="totallyTimeSpent" value="221335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49851632" visible="true" weight="0.31694403" />
+      <window_info id="Structure" order="1" sideWeight="0.5014837" side_tool="true" weight="0.30786687" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -485,17 +687,17 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.447541" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5770492" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.20655738" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.447541" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.447541" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.0852459" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32786885" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -507,7 +709,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,390 +720,402 @@
     <MESSAGE value="更新" />
     <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/EmployeeMapper.java">
+    <entry file="file://F:/新建文件夹/ac/src/views/example/list.vue" />
+    <entry file="file://F:/新建文件夹/ac/src/views/layout/Layout.vue" />
+    <entry file="file://F:/新建文件夹/ac/src/views/nested/menu2/index.vue" />
+    <entry file="file://F:/新建文件夹/ac/src/views/permission/directive.vue" />
+    <entry file="file://F:/迅雷下载/ac/src/router/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-6358" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/employee/EmployeeService.java">
+    <entry file="file://F:/迅雷下载/ac/src/router/modules/nested.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-          <folding>
-            <element signature="e#2053#2054#0" expanded="true" />
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2218#2219#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1243" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ious/src/main/java/cn/bdqn/controller/iou/IouController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMethodMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitMethodService.java">
+    <entry file="file://F:/新建文件夹/ac/src/router/index.js" />
+    <entry file="file://F:/迅雷下载/ac/src/router/modules/table.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/迅雷下载/ac/src/router/modules/sys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/迅雷下载/ac/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="168" column="12" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="12" />
           <folding>
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#150#201#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Nature.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Ctype.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CtypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/NatureMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CtypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/NatureMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Materials.java">
+    <entry file="file://F:/新建文件夹/ac/src/views/zip/organ.vue" />
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Institutions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MaterialsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MaterialsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="69" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="14" selection-end-column="69" />
+        <state relative-caret-position="25">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMethodMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/material/MaterialsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-          <folding>
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Producttype.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledgestatus.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/TransactionTypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/RespBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/transaction/TransactionTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/balancepayment/BalancePaymentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/BalancePayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="141" column="11" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/buser/BackendUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/MenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/role/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/menu/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/burole/BuRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/BackendUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/BackendUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/cn/bdqn/controller/sys/SysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="146" column="64" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/DevUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledgetype.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/VisitMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgestatusMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgetypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Institutions.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitMethodService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/institutions/InstitutionsService.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Visit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgetypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="126" column="4" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
+        <state relative-caret-position="175">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
           <folding>
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
             <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/visit/VisitService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/cn/bdqn/CustomerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/ProducttypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="117">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgestatusService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/product/ProducttypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/VisitMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="176">
+          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/DevUserMapper.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledgetype.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/devuser/DevUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+        <state relative-caret-position="3600">
+          <caret line="180" column="38" selection-start-line="180" selection-start-column="38" selection-end-line="180" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/PledgeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="125">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/pledge/PledgeService.java">
+    <entry file="file://$PROJECT_DIR$/customer/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/cn/bdqn/service/product/ProducttypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customer/src/main/java/cn/bdqn/customer/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268">
-          <caret line="183" column="41" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="41" />
+        <state relative-caret-position="249">
+          <caret line="225" column="8" lean-forward="true" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralTypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapper/src/main/java/cn/bdqn/mapper/CollateralMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/CollateralType.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Collateral.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/cn/bdqn/model/Pledge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

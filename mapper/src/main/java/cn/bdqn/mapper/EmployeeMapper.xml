@@ -6,7 +6,7 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="phone" jdbcType="CHAR" property="phone" />
     <result column="nickName" jdbcType="VARCHAR" property="nickName" />
-    <result column="IDCard" jdbcType="CHAR" property="IDCard" />
+    <result column="idCard" jdbcType="CHAR" property="idCard" />
     <result column="status" jdbcType="CHAR" property="status" />
     <result column="level" jdbcType="CHAR" property="level" />
     <result column="superior" jdbcType="INTEGER" property="superior" />
@@ -20,6 +20,7 @@
       <if test="keywords!=null and keywords!=''">
         and e.name like concat('%',#{keywords},'%')
       </if>
+      and e.status!=1
       limit #{start},#{size}
   </select>
   <select id="count" resultType="Long">
@@ -32,11 +33,9 @@
   <update id="updateStatus">
     update employee set status=1 where id=#{id}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from employee
-    where id = #{id,jdbcType=INTEGER}
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="cn.bdqn.model.Employee">
+     SELECT e.*,r.`nameZH` AS superName FROM employee e,role r
+      WHERE r.`id`=e.`level` and e.id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from employee
@@ -44,10 +43,10 @@
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Employee">
     insert into employee (name, phone,
-      nickName, IDCard, status, 
-      level, super)
+      nickName, idCard, status,
+      level, superior)
     values (#{name,jdbcType=VARCHAR}, #{phone,jdbcType=CHAR},
-      #{nickName,jdbcType=VARCHAR}, #{IDCard,jdbcType=CHAR}, #{status,jdbcType=CHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{idCard,jdbcType=CHAR}, #{status,jdbcType=CHAR},
       #{level,jdbcType=CHAR}, #{superior,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.Employee">
@@ -65,8 +64,8 @@
       <if test="nickName != null">
         nickName,
       </if>
-      <if test="IDCard != null">
-        IDCard,
+      <if test="idCard != null">
+        idCard,
       </if>
       <if test="status != null">
         status,
@@ -91,8 +90,8 @@
       <if test="nickName != null">
         #{nickName,jdbcType=VARCHAR},
       </if>
-      <if test="IDCard != null">
-        #{IDCard,jdbcType=CHAR},
+      <if test="idCard != null">
+        #{idCard,jdbcType=CHAR},
       </if>
       <if test="status != null">
         #{status,jdbcType=CHAR},
@@ -117,8 +116,8 @@
       <if test="nickName != null">
         nickName = #{nickName,jdbcType=VARCHAR},
       </if>
-      <if test="IDCard != null">
-        IDCard = #{IDCard,jdbcType=CHAR},
+      <if test="idCard != null">
+        idCard = #{idCard,jdbcType=CHAR},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=CHAR},
@@ -137,7 +136,7 @@
     set name = #{name,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=CHAR},
       nickName = #{nickName,jdbcType=VARCHAR},
-      IDCard = #{IDCard,jdbcType=CHAR},
+      idCard = #{idCard,jdbcType=CHAR},
       status = #{status,jdbcType=CHAR},
       level = #{level,jdbcType=CHAR},
       superior = #{superior,jdbcType=INTEGER}

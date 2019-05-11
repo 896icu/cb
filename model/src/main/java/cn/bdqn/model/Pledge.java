@@ -19,7 +19,7 @@ public class Pledge {
     private Integer attn;
 
     private Integer company;
-
+    private Integer duId;
     private Integer variety;
     private String typeName;
     private String statusName;
@@ -28,6 +28,14 @@ public class Pledge {
     private String varietyName;
     private String remark;
     private DevUser devUser;
+
+    public Integer getDuId() {
+        return duId;
+    }
+
+    public void setDuId(Integer duId) {
+        this.duId = duId;
+    }
 
     public String getRemark() {
         return remark;

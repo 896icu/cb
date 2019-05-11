@@ -8,6 +8,7 @@
     <result column="productName" jdbcType="VARCHAR" property="productName" />
     <result column="versionType" jdbcType="VARCHAR" property="versionType" />
     <result column="deposit" jdbcType="DECIMAL" property="deposit" />
+    <result column="IDCard" jdbcType="VARCHAR" property="IDCard"/>
     <result column="serviceCharge" jdbcType="DECIMAL" property="serviceCharge" />
     <result column="remarks" jdbcType="VARCHAR" property="remarks" />
     <result column="merchantSituation" jdbcType="VARCHAR" property="merchantSituation" />
@@ -18,7 +19,7 @@
     <result column="balance" jdbcType="DECIMAL" property="balance" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, backendId, institutionName, productName, versionType, deposit, serviceCharge, 
+    id, backendId, institutionName, productName, versionType,idCard, deposit, serviceCharge,
     remarks, merchantSituation, createDate, institutionalStatus, accountLimit, riskSetting, 
     balance
   </sql>
@@ -39,6 +40,7 @@
     <result column="balance" property="balance"/>
     <result column="phone" property="phone"/>
     <result column="idCard" property="idCard"/>
+    <result column="IDCard" property="IDCard" jdbcType="VARCHAR"/>
     <result column="name" property="name" />
   </resultMap>
   <update id="updateMoney">

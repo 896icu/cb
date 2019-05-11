@@ -5,6 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="phone" jdbcType="CHAR" property="phone" />
+    <result column="idCard" jdbcType="VARCHAR" property="idCard"/>
     <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -27,6 +28,11 @@
   </select>
   <select id="backendUserList" resultMap="BaseResultMap">
     SELECT b.*,r.`id` AS rid,r.`name` AS rname,r.`nameZh` AS rnamezh FROM backenduser b
+      INNER JOIN burole bu ON b.`id`=bu.`buId`
+      INNER JOIN role r ON r.`id`=bu.`rId`
+  </select>
+  <select id="count" resultType="Long">
+    SELECT count(*) FROM backenduser b
       INNER JOIN burole bu ON b.`id`=bu.`buId`
       INNER JOIN role r ON r.`id`=bu.`rId`
   </select>

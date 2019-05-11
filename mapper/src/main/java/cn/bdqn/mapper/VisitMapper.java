@@ -23,4 +23,5 @@ public interface VisitMapper {
     int updateByPrimaryKeySelective(Visit record);
     int addComment(Visit visit);
     int updateByPrimaryKey(Visit record);
+    String number(Integer id);
 }

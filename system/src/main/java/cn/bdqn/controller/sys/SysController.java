@@ -7,21 +7,18 @@ import cn.bdqn.service.buser.BackendUserService;
 import cn.bdqn.service.employee.EmployeeService;
 import cn.bdqn.service.extension.ExtensionService;
 import cn.bdqn.service.institutions.InstitutionsService;
+import cn.bdqn.service.menu.MenuService;
+import cn.bdqn.service.product.ProducttypeService;
 import cn.bdqn.service.role.RoleService;
 import cn.bdqn.service.sms.SmsService;
+import cn.bdqn.service.transaction.TransactionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/sys")
@@ -42,18 +39,26 @@ public class SysController {
     private RoleService roleService;
     @Autowired
     private BuRoleService buRoleService;
-    @RequestMapping(value = "/organ",method = RequestMethod.GET)
+    @Autowired
+    private ProducttypeService producttypeService;
+    @Autowired
+    private TransactionTypeService transactionTypeService;
+    @Autowired
+    private MenuService menuService;
+    @RequestMapping(value = "/organ",method = RequestMethod.POST)
     public Map<String,Object> getInstitutionByPage(
             @RequestParam(defaultValue = "1")Integer page,
             @RequestParam(defaultValue = "10")Integer size){
         Map<String,Object> map=new HashMap<>();
         List<Institutions> institutionsList=institutionsService.selectAll(page,size);
+        List<Producttype> producttypeList=producttypeService.selectAll();
         Long count=institutionsService.count();
         map.put("institutions",institutionsList);
+        map.put("producttypeList",producttypeList);
         map.put("count",count);
         return map;
     }
-    @RequestMapping(value = "/balancepayment",method = RequestMethod.GET)
+    @RequestMapping(value = "/balancepayment",method = RequestMethod.POST)
     public Map<String,Object> getBalancePaymentByPage(
             @RequestParam(defaultValue = "1")Integer page,
             @RequestParam(defaultValue = "10")Integer size,
@@ -61,11 +66,13 @@ public class SysController {
         Map<String,Object> map=new HashMap<>();
         List<BalancePayment> balancePaymentList=balancePaymentService.getBalancePaymentByPage(page,size,typeId,startBeginDate,endBeginDate);
         Long count=balancePaymentService.count(typeId,startBeginDate,endBeginDate);
+        List<TransactionType> transactionTypeList=transactionTypeService.selectAll();
         map.put("balancepayments",balancePaymentList);
+        map.put("transactionTypeList",transactionTypeList);
         map.put("count",count);
         return map;
     }
-    @RequestMapping(value = "/emp",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectEmp",method = RequestMethod.POST)
     public Map<String,Object> getEmployeeByPage(@RequestParam(defaultValue = "1")Integer page,
                                                 @RequestParam(defaultValue = "10")Integer size,
                                                 @RequestParam(defaultValue = "")String keywords){
@@ -76,54 +83,79 @@ public class SysController {
         map.put("count",count);
         return map;
     }
-    @RequestMapping(value = "emp",method = RequestMethod.POST)
+    @RequestMapping(value = "addEmp",method = RequestMethod.POST)
     public RespBean addEmp(Employee employee) throws Exception {
+        employee.setStatus("0");
         if(employeeService.insert(employee)){
             smsService.send(employee.getPhone(),"1");
             return RespBean.ok("添加成功");
         }
         return RespBean.error("添加失败");
     }
-    @RequestMapping(value = "emp",method = RequestMethod.PUT)
+    @RequestMapping(value = "updateEmp",method = RequestMethod.POST)
     public RespBean updateEmp(Employee employee) throws Exception {
         if(employeeService.updateByPrimaryKeySelective(employee)){
             return RespBean.ok("修改成功");
         }
         return RespBean.error("修改失败");
     }
+    @RequestMapping(value = "toAddEmp",method = RequestMethod.GET)
+    public Map<String,Object> toAddEmp() throws Exception {
+        Map<String,Object> map=new HashMap<>();
+        List<BackendUser> backendUserList=backendUserService.backendUserList();
+        map.put("backendUserList",backendUserList);
+        return map;
+    }
     @RequestMapping(value = "toUpdateEmp",method = RequestMethod.GET)
     public Map<String,Object> toUpdateEmp(Integer id) throws Exception {
        Map<String,Object> map=new HashMap<>();
        Employee employee=employeeService.selectByPrimaryKey(id);
+       List<BackendUser> backendUserList=backendUserService.backendUserList();
+       map.put("backendUserList",backendUserList);
        map.put("emp",employee);
        return map;
     }
-    @RequestMapping(value = "updateStatus",method = RequestMethod.POST)
+    @RequestMapping(value = "updateStatus",method = RequestMethod.GET)
     public RespBean updateStatus(Integer id){
         if(employeeService.updateStatus(id)){
             return RespBean.ok("修改状态成功");
         }
         return RespBean.error("修改状态失败");
     }
-    @RequestMapping(value = "selectOne",method = RequestMethod.GET)
+    @RequestMapping(value = "selectOne",method = RequestMethod.POST)
     public Map<String,Object> getHrById(Integer id){
         Map<String,Object> map=new HashMap<>();
+        List<BackendUser> backendUserList=new ArrayList<>();
         BackendUser backendUser=backendUserService.selectById(id);
-        map.put("backendUser",backendUser);
+        backendUserList.add(backendUser);
+        map.put("backendUserList",backendUserList);
         return map;
     }
     @RequestMapping(value = "selectAll",method = RequestMethod.GET)
     public Map<String,Object> getAllHr(Integer id){
         Map<String,Object> map=new HashMap<>();
         List<BackendUser> backendUserList=backendUserService.backendUserList();
+        Long count=backendUserService.count();
         map.put("backendUserList",backendUserList);
+        map.put("count",count);
         return map;
     }
     @RequestMapping(value = "extension",method = RequestMethod.GET)
-    public Map<String,Object> getExtension(Integer id){
+    public Map<String,Object> getExtension(){
         Map<String,Object> map=new HashMap<>();
-        Extension extension=extensionService.selectByPrimaryKey(id);
-        map.put("extension",extension);
+        List<Extension> extensionList=new ArrayList<>();
+        Extension extension=extensionService.selectByPrimaryKey(1);
+        extensionList.add(extension);
+        map.put("extensionList",extensionList);
+        return map;
+    }
+    @RequestMapping(value = "selectAllRole",method = RequestMethod.POST)
+    public Map<String,Object> selectAllRole(){
+        Map<String,Object> map=new HashMap<>();
+        List<Role> roleList=roleService.selectAll();
+        Long count=roleService.count();
+        map.put("roleList",roleList);
+        map.put("count",count);
         return map;
     }
     @RequestMapping(value = "addRole",method = RequestMethod.POST)
@@ -150,6 +182,13 @@ public class SysController {
         List<Role> roleList=roleService.selectAll();
         map.put("roleList",roleList);
         map.put("backendUser",backendUser);
+        return map;
+    }
+    @RequestMapping(value = "toAddRole",method = RequestMethod.GET)
+    public Map<String,Object> toAddRole(Integer id){
+        Map<String,Object> map=new HashMap<>();
+        List<Menu> menuList=menuService.selectAll();
+        map.put("menuList",menuList);
         return map;
     }
 }
