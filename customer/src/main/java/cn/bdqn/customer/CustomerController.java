@@ -172,6 +172,7 @@ public class CustomerController {
     @RequestMapping(value = "addPledge",method = RequestMethod.POST)
     public RespBean addPledge(Pledge pledge) throws Exception {
         pledge.setCreateDate(new Date());
+        pledge.setVariety(2);
         if(pledgeService.insert(pledge)){
             return RespBean.ok("添加成功");
         }
@@ -184,25 +185,31 @@ public class CustomerController {
         List<Producttype> producttypeList=producttypeService.selectAll();
         List<Pledgestatus> pledgestatusList=pledgestatusService.selectAll();
         List<DevUser> devUserList=devUserService.selectAll();
+        List<BackendUser> backendUserList=backendUserService.backendUserList();
         map.put("extensionList",extensionList);
         map.put("producttypeList",producttypeList);
         map.put("pledgestatusList",pledgestatusList);
         map.put("devUserList",devUserList);
+        map.put("backendUserList",backendUserList);
         return map;
     }
     @RequestMapping(value = "toUpdatePledge",method = RequestMethod.GET)
     public Map<String,Object> toUpdatePledge(Integer id) throws Exception {
         Map<String,Object> map=new HashMap<>();
         Pledge pledge=pledgeService.selectByPrimaryKey(id);
+        DevUser devUser=pledge.getDevUser();
         List<Extension> extensionList=extensionService.selectAll();
         List<Producttype> producttypeList=producttypeService.selectAll();
         List<Pledgestatus> pledgestatusList=pledgestatusService.selectAll();
         List<DevUser> devUserList=devUserService.selectAll();
+        List<BackendUser> backendUserList=backendUserService.backendUserList();
         map.put("extensionList",extensionList);
         map.put("producttypeList",producttypeList);
+        map.put("backendUserList",backendUserList);
         map.put("pledgestatusList",pledgestatusList);
         map.put("devUserList",devUserList);
         map.put("pledge",pledge);
+        map.put("devUser",devUser);
         return map;
     }
     @RequestMapping(value = "updatePledge",method = RequestMethod.POST)
@@ -304,5 +311,12 @@ public class CustomerController {
             return RespBean.ok("删除成功");
         }
         return RespBean.error("删除失败");
+    }
+    @RequestMapping(value = "getName",method = RequestMethod.GET)
+    public Map<String,Object> getName(Integer id){
+        Map<String,Object> map=new HashMap<>();
+        DevUser devUser=devUserService.selectByPrimaryKey(id);
+        map.put("name",devUser.getName());
+        return map;
     }
 }

@@ -12,8 +12,8 @@ public class Collateral {
 
     private BigDecimal money;
 
-    private BigDecimal pledged;
-
+    private Integer pledged;
+    private String collateralId;
     private Date createDate;
 
     private String specifications;
@@ -107,12 +107,20 @@ public class Collateral {
         this.money = money;
     }
 
-    public BigDecimal getPledged() {
+    public Integer getPledged() {
         return pledged;
     }
 
-    public void setPledged(BigDecimal pledged) {
+    public void setPledged(Integer pledged) {
         this.pledged = pledged;
+    }
+
+    public String getCollateralId() {
+        return collateralId;
+    }
+
+    public void setCollateralId(String collateralId) {
+        this.collateralId = collateralId;
     }
 
     public Date getCreateDate() {

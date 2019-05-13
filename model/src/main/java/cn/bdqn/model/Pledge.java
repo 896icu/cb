@@ -28,6 +28,15 @@ public class Pledge {
     private String varietyName;
     private String remark;
     private DevUser devUser;
+    private String pledgeId;
+
+    public String getPledgeId() {
+        return pledgeId;
+    }
+
+    public void setPledgeId(String pledgeId) {
+        this.pledgeId = pledgeId;
+    }
 
     public Integer getDuId() {
         return duId;

@@ -7,6 +7,7 @@
     <result column="transaction" jdbcType="DECIMAL" property="transaction" />
     <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
     <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="remark" jdbcType="VARCHAR" property="remark"/>
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="attn" jdbcType="INTEGER" property="attn" />
     <result column="company" jdbcType="INTEGER" property="company" />
@@ -17,6 +18,7 @@
     <result column="companyName" property="companyName" />
     <result column="varietyName" property="varietyName" />
     <result column="attnName" property="attnName" />
+    <result column="pledgeId" property="pledgeId" jdbcType="VARCHAR"/>
     <association property="devUser" javaType="cn.bdqn.model.DevUser">
       <id column="d_id" property="id"/>
       <result column="d_name" property="name"/>
@@ -25,7 +27,7 @@
     </association>
   </resultMap>
   <sql id="Base_Column_List">
-    id, valuation, transaction, createDate, name, typeId, status, attn, company, variety
+    id, valuation, transaction, createDate,pledgeId,remark, name, typeId, status, attn, company, variety
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     SELECT p.*,s.name AS statusName,bu.name as attnName,e.organizationName AS companyName,pt.productTypeName AS varietyName,
@@ -77,11 +79,11 @@
     insert into pledge (valuation, transaction,
       createDate, name, typeName,duId,
       status, attn, company, 
-      variety)
+      variety,pledgeId,remark)
     values (#{valuation,jdbcType=DECIMAL}, #{transaction,jdbcType=DECIMAL},
       #{createDate,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{typeName,jdbcType=VARCHAR},
       #{status,jdbcType=INTEGER},#{duId,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{company,jdbcType=INTEGER},
-      #{variety,jdbcType=INTEGER})
+      #{variety,jdbcType=INTEGER},#{pledgeId,jdbcType=VARCHAR},#{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.bdqn.model.Pledge">
     insert into pledge
@@ -116,6 +118,12 @@
       <if test="variety != null">
         variety,
       </if>
+      <if test="pledgeId!=null">
+        pledgeId,
+      </if>
+      <if test="remark!=null">
+        remark,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -147,6 +155,12 @@
       </if>
       <if test="variety != null">
         #{variety,jdbcType=INTEGER},
+      </if>
+      <if test="pledgeId!=null">
+        #{pledgeId,jdbcType=VARCHAR},
+      </if>
+      <if test="remark!=null">
+        #{remark,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -183,6 +197,12 @@
       <if test="variety != null">
         variety = #{variety,jdbcType=INTEGER},
       </if>
+      <if test="pledgeId!=null">
+        pledgeId= #{pledgeId,jdbcType=VARCHAR},
+      </if>
+      <if test="remark!=null">
+        remark= #{remark,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -196,7 +216,9 @@
       status = #{status,jdbcType=INTEGER},
       attn = #{attn,jdbcType=INTEGER},
       company = #{company,jdbcType=INTEGER},
-      variety = #{variety,jdbcType=INTEGER}
+      variety = #{variety,jdbcType=INTEGER},
+      pledgeId=#{pledgeId,jdbcType=VARCHAR},
+      remark=#{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

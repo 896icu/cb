@@ -6,7 +6,8 @@
     <result column="name" jdbcType="INTEGER" property="name" />
     <result column="company" jdbcType="INTEGER" property="company" />
     <result column="money" jdbcType="DECIMAL" property="money" />
-    <result column="pledged" jdbcType="DECIMAL" property="pledged" />
+    <result column="pledged" jdbcType="INTEGER" property="pledged" />
+    <result column="collateralId" jdbcType="VARCHAR" property="collateralId"/>
     <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
     <result column="specifications" jdbcType="VARCHAR" property="specifications" />
     <result column="number" jdbcType="INTEGER" property="number" />
@@ -27,7 +28,7 @@
     </association>
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, company, money, pledged, createDate, specifications, number, address, status, 
+    id, name, company, money, pledged,collateralId, createDate, specifications, number, address, status,
     attn, remark, duId
   </sql>
   <select id="selectByName" resultMap="BaseResultMap">
@@ -41,7 +42,7 @@
     INNER JOIN devuser d ON d.`id`=c.`duId`
     INNER JOIN extension e ON e.`id`=c.`company`
     WHERE 1=1
-    <if test="createDate!=null">
+    <if test="createDate!=null and createDate!=''">
       AND DATE_FORMAT(c.createDate,'%Y-%m-%d') =#{createDate}
     </if>
     <if test="keyword!=null and keyword!=''">
@@ -58,7 +59,7 @@
     INNER JOIN devuser d ON d.`id`=c.`duId`
     INNER JOIN extension e ON e.`id`=c.`company`
     WHERE 1=1
-    <if test="createDate!=null">
+    <if test="createDate!=null and createDate!=''">
       AND DATE_FORMAT(c.createDate,'%Y-%m-%d') =#{createDate}
     </if>
     <if test="keyword!=null and keyword!=''">
@@ -83,12 +84,12 @@
   </delete>
   <insert id="insert" parameterType="cn.bdqn.model.Collateral">
     insert into collateral (name, company,
-      money, pledged, createDate, 
+      money, pledged,collateralId, createDate,
       specifications, number, address, 
       status, attn, remark, 
       duId)
     values (#{name,jdbcType=INTEGER}, #{company,jdbcType=INTEGER},
-      #{money,jdbcType=DECIMAL}, #{pledged,jdbcType=DECIMAL}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{money,jdbcType=DECIMAL}, #{pledged,jdbcType=INTEGER},#{collateralId,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP},
       #{specifications,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
       #{status,jdbcType=INTEGER}, #{attn,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
       #{duId,jdbcType=INTEGER})
@@ -135,6 +136,9 @@
       <if test="duId != null">
         duId,
       </if>
+      <if test="collateralId!=null">
+        collateralId,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -176,6 +180,9 @@
       <if test="duId != null">
         #{duId,jdbcType=INTEGER},
       </if>
+      <if test="collateralId!=null">
+        #{collateralId,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="cn.bdqn.model.Collateral">
@@ -191,7 +198,7 @@
         money = #{money,jdbcType=DECIMAL},
       </if>
       <if test="pledged != null">
-        pledged = #{pledged,jdbcType=DECIMAL},
+        pledged = #{pledged,jdbcType=INTEGER},
       </if>
       <if test="createDate != null">
         createDate = #{createDate,jdbcType=TIMESTAMP},
@@ -217,6 +224,9 @@
       <if test="duId != null">
         duId = #{duId,jdbcType=INTEGER},
       </if>
+      <if test="collateralId!=null">
+        #{collateralId,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -225,7 +235,7 @@
     set name = #{name,jdbcType=INTEGER},
       company = #{company,jdbcType=INTEGER},
       money = #{money,jdbcType=DECIMAL},
-      pledged = #{pledged,jdbcType=DECIMAL},
+      pledged = #{pledged,jdbcType=INTEGER},
       createDate = #{createDate,jdbcType=TIMESTAMP},
       specifications = #{specifications,jdbcType=VARCHAR},
       number = #{number,jdbcType=INTEGER},
@@ -233,7 +243,8 @@
       status = #{status,jdbcType=INTEGER},
       attn = #{attn,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR},
-      duId = #{duId,jdbcType=INTEGER}
+      duId = #{duId,jdbcType=INTEGER},
+      collateralId=#{collateralId,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
